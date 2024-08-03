@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding-top: 0px;
+    /* zoom: 80%; */
+}
+.leftside-navigation {
+    position: fixed;
+    top: 0;
+    background: var(--menu-bg-color, #259E58);
+    height: 100%;
+    justify-content: space-between;
+    /* overflow: auto; */
+}
+.menu-wrapperMap {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    
+    justify-content: center;
+    margin: 24px 96px 45px 97px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: var(--White, #FFF);
+}
+ul {
+    list-style-type: none;  
+}
+#nav-accordion li {
+    position: relative;
+    
+}
+#nav-accordion li a  {
+    display: block;
+    padding: 18px 16px;
+    text-decoration: none;
+    color: var(--White, #FFF);
+    font-family: Bangers;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#nav-accordion li:hover>a {
+    color: var(--hover-new-color, #C8FF9C);
+}
+#nav-accordion .sub li a {
+    color: var(--gray-gray-500, #666);
+/* Nunito/18px/18px: Medium */
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+}
+#nav-accordion .sub li:hover>a {
+    color: var(--hover-new-color, #C8FF9C);
+}
+#nav-accordion .sub{
+    display: none;
+    position: absolute; 
+    left: 100%;
+    top: 0px;
+    border-radius: 12px;
+    background: #FFF;
+    width: 232px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#nav-accordion li:hover > .sub{
+    display: block;
+}
+.show{
+    background-color: #af6d6d;
+}
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    /* margin-bottom: 20px; */
+    margin: 275px 0px 0px -15px
+}
+
+.logoDamSen {
+    /* max-width: 100px; Adjust the size as needed */
+    margin: 10px 0;
+}
