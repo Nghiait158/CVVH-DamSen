@@ -1,7 +1,9 @@
 body {
     margin: 0;
     padding-top: 0px;
-    /* zoom: 80%; */
+    zoom: 90%;
+    justify-content: center;
+    align-items: center;
 }
 .leftside-navigation {
     position: fixed;
@@ -10,6 +12,10 @@ body {
     height: 100%;
     justify-content: space-between;
     /* overflow: auto; */
+    z-index: 1000;
+}
+.menuMap {
+    cursor: pointer;
 }
 .menu-wrapperMap {
     display: flex;
@@ -69,13 +75,12 @@ ul {
     padding: 12px;
     flex-direction: column;
     align-items: flex-start;
+    z-index: 1001;
 }
 #nav-accordion li:hover > .sub{
     display: block;
 }
-.show{
-    background-color: #af6d6d;
-}
+
 .image-container {
     display: flex;
     flex-direction: column; /* Stack images vertically */
@@ -88,3 +93,132 @@ ul {
     /* max-width: 100px; Adjust the size as needed */
     margin: 10px 0;
 }
+.social-logos {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between the items */
+    width: 130px; /* Adjust the width as needed */
+    /* padding: 10px 0; Optional: Add padding to top and bottom */
+}
+.overlay{
+    position: absolute;
+    background: var(--frame-background, #E6FFD2);
+    height: 100%;
+    width: calc(100% - 257px);
+    top:0;
+    left:257px;
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.overlay.visible {
+    opacity: 1;
+}
+.hidden {
+    display: none;
+}
+.contentBody{
+    position: absolute;
+    background-color: #89c248;
+    height: 100%;
+    width: calc(100% - 257px);
+    top:0;
+    left:257px;
+    overflow: auto;
+    /* z-index: -2px; */
+}
+
+.centered-box {
+    position: absolute; 
+    top: 24px; 
+    bottom: 24px; 
+    left: 24px; 
+    right: 24px; 
+    background-color: #fff; 
+    z-index: 1001; 
+ 
+}
+.areaBox {
+    position: absolute;
+    top: 31px; /* Cách từ trên */
+    right: 41px; /* Cách từ bên phải */
+    left: 85px; /* Cách từ bên trái */
+    height: 73px; /* Chiều cao cụ thể */
+    width: 1735px; /* Chiều rộng cụ thể */
+    /* background-color: #ddd; Màu nền của inner-box */
+    display: flex;
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    /* overflow: hidden; Ẩn phần nội dung tràn ra ngoài */
+}
+
+.area-item {
+    color: #67776F;
+    font-family: Bangers;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    margin-right: 110px;
+    position: relative;
+    z-index: 1;
+}
+.line {
+    position: absolute;
+    bottom: 0; /* Đặt đường kẻ ở dưới cùng */
+    left: 0;
+    width: 0; /* Đặt chiều rộng mặc định là 0 */
+    height: 4px; /* Chiều cao của đường kẻ */
+    background-color: rgba(238, 205, 224, 1); /* Màu nền mặc định */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Hiệu ứng chuyển màu và chiều rộng */
+    z-index: 0; /* Đặt đường kẻ ở dưới cùng */
+}
+.list-location {
+    position: absolute;
+    top: 153px; /* Cách từ trên */
+    left: 85px; /* Cách từ bên trái */
+    right: 85px; /* Cách từ bên phải */
+    bottom: 104px; /* Cách từ dưới */
+    background-color: yellow; /* Màu vàng */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 190px;
+}
+/* .table {
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+th {
+    background-color: #f4f4f4; 
+}
+
+td {
+    background-color: #fff; 
+} */
+.column {
+    width: 263px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff; /* Màu chữ cho tương phản tốt */
+  }
+.col-1 {
+    background-color: #ff9999; /* Màu nền cho cột 1 */
+  }
+  
+  .col-2 {
+    background-color: #99ff99; /* Màu nền cho cột 2 */
+  }
+  
+  .col-3 {
+    background-color: #9999ff; /* Màu nền cho cột 3 */
+  }
+  
+  .col-4 {
+    background-color: #ffff99; /* Màu nền cho cột 4 */
+  }
