@@ -1,0 +1,113 @@
+.img-Home-Page{
+    background-color: aqua;
+    margin: 24px 24px 24px 24px;
+    width: 1808px;
+    height: 953px;
+    flex-shrink: 0;
+    /* z-index: 33; */
+    position: relative;
+}
+.image-containerDamSen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease;
+}
+.damsen-imageHomePage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* position: absolute; */
+    flex-shrink: 0;
+    
+}
+/* .img-Home-Page .damsen1, .damsen2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease;
+}
+.img-Home-Page .damsen1 {
+    left: -100%;
+    transform: translateX(-100%);
+}
+
+.img-Home-Page .damsen2 {
+    right: -100%;
+    transform: translateX(100%);    
+} */
+.img-Home-Page .damSenPark-HomePage{
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 83.359px); /* Center horizontally by half the width of the logo */
+    width: 166.718px;
+    height: 54.962px;
+    z-index: 1;
+}
+.img-Home-Page .logoDamSen-HomePage{
+    position: absolute;
+    top: 120px; /* Adjust to place the image below the logo with some margin (example: 20px) */
+    left: 858px; /* Center horizontally by half the width of the image */
+    width: 77.863px;
+    height: 62.29px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.img-Home-Page .LogoMoveLeft-HomePage, .LogoMoveRight-HomePage {
+    position: absolute;
+    display: flex;
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.img-Home-Page .LogoMoveLeft-HomePage {
+    top: 445px;
+    left: 40px;
+}
+
+.img-Home-Page .LogoMoveRight-HomePage {
+    top: 445px;
+    right: 40px;
+}
+
+.KhamPhaNgay{
+    position: absolute;
+    display: flex;
+    top: 798px; /* Distance from the top */
+    right: 679px; /* Distance from the right */
+    left: 770px; /* Distance from the left */
+    bottom: 91px; /* Distance from the bottom */
+    width: 257px;
+    height: 64px;
+    border-radius: 8px;
+    background: var(--green-green-500, #259E58); /* You can change this to any color you like */
+    z-index: 1;
+    /* padding: 10px 12px 10px 16px; */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+.KhamPhaNgay-text{
+    color: var(--White, #FFF);
+    text-align: center;
+
+    /* Nunito/23px/23px: Bold */
+    font-family: Nunito;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}

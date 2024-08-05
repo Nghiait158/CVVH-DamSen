@@ -112,11 +112,14 @@ ul {
     opacity: 1;
 }
 .hidden {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
     display: none;
 }
 .contentBody{
     position: absolute;
-    background-color: #89c248;
+    background: var(--frame-background, #E6FFD2);
     height: 100%;
     width: calc(100% - 257px);
     top:0;
@@ -155,7 +158,7 @@ ul {
     font-style: normal;
     font-weight: 400;
     cursor: pointer;
-    margin-right: 110px;
+    margin-right:95px;
     position: relative;
     z-index: 1;
 }
@@ -169,6 +172,11 @@ ul {
     transition: width 0.3s ease, background-color 0.3s ease; 
     z-index: 0; 
 }
+.list-location-CanhDep,
+.list-location-SanKhau,
+.list-location-AmThuc,
+.list-location-GiaoDuc,
+.list-location-VuonThu,
 .list-location-TroChoi {
     position: absolute;
     top: 153px; 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <link rel="stylesheet" href="{{('/frontend/css/header.css')}}" />
-    {{-- <link rel="stylesheet" href="{{('/frontend/css/global.css')}}" /> --}}
+    <link rel="stylesheet" href="{{('/frontend/css/homePage.css')}}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap"
@@ -79,7 +79,7 @@
       </div>
   </aside>   
   <section class="contentBody">
-    <h1>content body</h1>
+    {{-- <h1>content body</h1> --}}
     @yield('content')
   </section>
 
@@ -91,7 +91,8 @@
         <div class="areaBox">
             <p class="area-item">Trò chơi</p>
             <p class="area-item">Vườn thú</p>
-            <p class="area-item">Cảnh đẹp sân khấu</p>
+            <p class="area-item">Cảnh đẹp</p>
+            <p class="area-item">Sân khấu</p>
             <p class="area-item">Giáo dục trải nghiệm</p>
             <p class="area-item">Ẩm thực</p>
             <div class="line"></div>
@@ -100,6 +101,7 @@
         {{-- ---------------------------------------- --}}
         <div class="list-location-TroChoi">
           <div class="column col-1">
+            
             <p class="categoryName">CẢM GIÁC MẠNH</p>
             {{-- --@foreach ---- --}}
             <div class="item-location">
@@ -151,6 +153,200 @@
               <div class="circle-location">26</div>
               <div class="item-location-text">Hải Cẩu Vượt Thác</div>
             </div>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {{----------------------------------------------------  --}}
+        {{-- ---------------------------------------- -------------}}
+        <div class="list-location-VuonThu">
+          <div class="column col-1">
+            
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">35</div>
+              <span class="item-location-text">Khỉ Đuôi Dài</span>
+            </div>
+          </div>
+
+          <div class="column col-2">
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">36</div>
+              <span class="item-location-text">Gấu Ngựa</span>  
+            </div>
+          </div>
+
+          <div class="column col-3">
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">37</div>
+              <span class="item-location-text">Đười Ươi Sumatra</span>
+            </div>
+          </div>
+
+          <div class="column col-4">
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+          </div>
+        </div>
+
+
+        {{-- ---------------------------------------- -------------}}
+        <div class="list-location-CanhDep">
+          <div class="column col-1">
+            
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">46</div>
+              <span class="item-location-text">Nam Tú Thượng Uyển</span>
+            </div>
+          </div>
+
+          <div class="column col-2">
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">14</div>
+              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
+            </div>
+          </div>
+
+          <div class="column col-3">
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">19</div>
+              <span class="item-location-text">Băng Đăng</span>
+            </div>
+          </div>
+
+          <div class="column col-4">
+            <p class="categoryName"></p>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {{----------------------------------------------------  --}}
+        {{----------------------------------------------------  --}}
+        {{-- ---------------------------------------- -------------}}
+        <div class="list-location-SanKhau">
+          <div class="column col-1">
+            
+            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <div class="item-location">
+              <div class="circle-location">01</div>
+              <span class="item-location-text">Cá Chép Nhào Lộn</span>
+            </div>
+          </div>
+
+          <div class="column col-2">
+            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <div class="item-location">
+              <div class="circle-location">14</div>
+              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
+            </div>
+          </div>
+
+          <div class="column col-3">
+            <p class="categoryName">GIẢI TRÍ</p>
+            <div class="item-location">
+              <div class="circle-location">19</div>
+              <span class="item-location-text">Băng Đăng</span>
+            </div>
+          </div>
+
+          <div class="column col-4">
+            <p class="categoryName">THIẾU NHI</p>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {{----------------------------------------------------  --}}
+        {{-- ---------------------------------------- -------------}}
+        <div class="list-location-GiaoDuc">
+          <div class="column col-1">
+            
+            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <div class="item-location">
+              <div class="circle-location">01</div>
+              <span class="item-location-text">Cá Chép Nhào Lộn</span>
+            </div>
+          </div>
+
+          <div class="column col-2">
+            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <div class="item-location">
+              <div class="circle-location">14</div>
+              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
+            </div>
+          </div>
+
+          <div class="column col-3">
+            <p class="categoryName">GIẢI TRÍ</p>
+            <div class="item-location">
+              <div class="circle-location">19</div>
+              <span class="item-location-text">Băng Đăng</span>
+            </div>
+          </div>
+
+          <div class="column col-4">
+            <p class="categoryName">THIẾU NHI</p>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+          </div>
+        </div>
+
+
+
+        {{----------------------------------------------------  --}}
+        {{-- ---------------------------------------- -------------}}
+        <div class="list-location-AmThuc">
+          <div class="column col-1">
+            
+            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <div class="item-location">
+              <div class="circle-location">01</div>
+              <span class="item-location-text">Cá Chép Nhào Lộn</span>
+            </div>
+          </div>
+
+          <div class="column col-2">
+            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <div class="item-location">
+              <div class="circle-location">14</div>
+              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
+            </div>
+          </div>
+
+          <div class="column col-3">
+            <p class="categoryName">GIẢI TRÍ</p>
+            <div class="item-location">
+              <div class="circle-location">19</div>
+              <span class="item-location-text">Băng Đăng</span>
+            </div>
+          </div>
+
+          <div class="column col-4">
+            <p class="categoryName">THIẾU NHI</p>
             <div class="item-location">
               <div class="circle-location">23</div>
               <div class="item-location-text">Ếch nhảy</div>
@@ -217,6 +413,78 @@
             }, 1000);
         });
     });
+
+    // --------------- ấn vào area-----------------------
+    // document.addEventListener("DOMContentLoaded", function() {
+    //       // Lấy các phần tử cần thiết
+    //       const areaItems = document.querySelectorAll(".area-item");
+    //       const listLocationTroChoi = document.querySelector(".list-location-TroChoi");
+    //       const listLocationVuonThu = document.querySelector(".list-location-VuonThu");
+    //       const listLocationSanKhau = document.querySelector(".list-location-SanKhau");
+    //       const listLocationGiaoDuc = document.querySelector(".list-location-GiaoDuc");
+    //       const listLocationAmThuc = document.querySelector(".list-location-AmThuc");
+
+    //       // Thêm lớp hidden ban đầu
+    //       listLocationTroChoi.classList.add("hidden");
+    //       listLocationVuonThu.classList.add("hidden");
+    //       listLocationSanKhau.classList.add("hidden");
+    //       listLocationGiaoDuc.classList.add("hidden");
+    //       listLocationAmThuc.classList.add("hidden");
+          
+    //       // Thêm sự kiện click cho từng mục
+    //       areaItems.forEach(function(item) {
+    //           item.addEventListener("click", function() {
+    //               // Ẩn tất cả các phần tử danh sách vị trí
+    //               listLocationTroChoi.classList.add("hidden");
+    //               listLocationVuonThu.classList.add("hidden");
+    //               listLocationSanKhau.classList.add("hidden");
+    //               listLocationGiaoDuc.classList.add("hidden");
+    //               listLocationAmThuc.classList.add("hidden");
+
+    //               // Hiển thị phần tử tương ứng
+    //               if (item.textContent === "Trò chơi") {
+    //                   listLocationTroChoi.classList.remove("hidden");
+    //               } else if (item.textContent === "Vườn thú") {
+    //                   listLocationVuonThu.classList.remove("hidden");
+    //               } else if (item.textContent === "Cảnh Đẹp Sân Khấu") {
+    //                   listLocationSanKhau.classList.remove("hidden");
+    //               } else if (item.textContent === "Giáo Dục Trải Nghiệm") {
+    //                 listLocationGiaoDuc.classList.remove("hidden");
+    //               } else if (item.textContent === "Ẩm Thực") {
+    //                 listLocationAmThuc.classList.remove("hidden");
+    //               }
+    //           });
+    //       });
+    //   });
+    document.addEventListener("DOMContentLoaded", function() {
+    // Lấy các phần tử cần thiết
+    const areaItems = document.querySelectorAll(".area-item");
+    const listLocations = {
+        "Trò chơi": document.querySelector(".list-location-TroChoi"),
+        "Vườn thú": document.querySelector(".list-location-VuonThu"),
+        "Cảnh đẹp": document.querySelector(".list-location-CanhDep"),
+        "Sân khấu": document.querySelector(".list-location-SanKhau"),
+        "Giáo dục trải nghiệm": document.querySelector(".list-location-GiaoDuc"),
+        "Ẩm thực": document.querySelector(".list-location-AmThuc")
+    };
+
+    // Thêm lớp hidden ban đầu cho tất cả các danh sách
+    Object.values(listLocations).forEach(location => location.classList.add("hidden"));
+
+    // Thêm sự kiện click cho từng mục
+    areaItems.forEach(function(item) {
+        item.addEventListener("click", function() {
+            // Ẩn tất cả các phần tử danh sách vị trí
+            Object.values(listLocations).forEach(location => location.classList.add("hidden"));
+
+            // Hiển thị phần tử tương ứng
+            const selectedLocation = listLocations[item.textContent];
+            if (selectedLocation) {
+                selectedLocation.classList.remove("hidden");
+            }
+        });
+    });
+});
   </script>
 
 </body>
