@@ -96,31 +96,71 @@
             <p class="area-item">Ẩm thực</p>
             <div class="line"></div>
         </div>
-        <div class="list-location">
-          {{-- <table class="table">
-            <thead>
-              <tr>
-                <th>Cột 1</th>
-                <th>Cột 2</th>
-                <th>Cột 3</th>
-                <th>Cột 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dữ liệu 1</td>
-                <td>Dữ liệu 2</td>
-                <td>Dữ liệu 3</td>
-                <td>Dữ liệu 4</td>
-              </tr>
-              <!-- Thêm nhiều hàng nếu cần -->
-            </tbody>
-          </table> --}}
-          <div class="column col-1">Cột 1</div>
-          <div class="column col-2">Cột 2</div>
-          <div class="column col-3">Cột 3</div>
-          <div class="column col-4">Cột 4</div>
+
+        {{-- ---------------------------------------- --}}
+        <div class="list-location-TroChoi">
+          <div class="column col-1">
+            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            {{-- --@foreach ---- --}}
+            <div class="item-location">
+              <div class="circle-location">01</div>
+              <span class="item-location-text">Cá Chép Nhào Lộn</span>
+            </div>
+            <div class="item-location">
+              <div class="circle-location">02</div>
+              <span class="item-location-text">Lâu Đài Kinh Dị</span>
+            </div>
+            <div class="item-location">
+              <div class="circle-location">03</div>
+              <span class="item-location-text">Phượng Hoàng Bay</span>
+            </div>  
+          {{-- ------------ --}}
+          </div>
+
+          <div class="column col-2">
+            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <div class="item-location">
+              <div class="circle-location">14</div>
+              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
+            </div>
+          </div>
+
+          <div class="column col-3">
+            <p class="categoryName">GIẢI TRÍ</p>
+            <div class="item-location">
+              <div class="circle-location">19</div>
+              <span class="item-location-text">Băng Đăng</span>
+            </div>
+          </div>
+
+          <div class="column col-4">
+            <p class="categoryName">THIẾU NHI</p>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+            <div class="item-location">
+              <div class="circle-location">24</div>
+              <div class="item-location-text">Điệu Nhảy Thiên Thần</div>
+            </div>
+            <div class="item-location">
+              <div class="circle-location">25</div>
+              <div class="item-location-text">Khinh Khí Cầu Bay</div>
+            </div>
+            <div class="item-location">
+              <div class="circle-location">26</div>
+              <div class="item-location-text">Hải Cẩu Vượt Thác</div>
+            </div>
+            <div class="item-location">
+              <div class="circle-location">23</div>
+              <div class="item-location-text">Ếch nhảy</div>
+            </div>
+          </div>
         </div>
+
+
+
+        {{----------------------------------------------------  --}}
       </div>
     </div>
 
