@@ -6,6 +6,8 @@
 
     <link rel="stylesheet" href="{{('/frontend/css/header.css')}}" />
     <link rel="stylesheet" href="{{('/frontend/css/homePage.css')}}" />
+    <link rel="stylesheet" href="{{('/frontend/css/khampha.css')}}" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Bangers:wght@400&display=swap"
@@ -32,13 +34,13 @@
             </div>
             <ul class="sidebar-menu" id="nav-accordion">
                   <li class="sub-menu">
-                      <a class="active" href="{{URL::to('/adminContent')}}">
+                      <a class="active" href="{{URL::to('/trangchu')}}">
                           <span>Trang chủ</span>
                       </a>
                   </li>
                    
                   <li class="sub-menu">
-                      <a href="javascript:;">Khám Phá</a>
+                      <a href="{{URL::to('/khampha')}}">Khám Phá</a>
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;">Giới thiệu </a>
@@ -89,12 +91,9 @@
       {{-- <p>Map List</p>   --}}
       <div class="centered-box">
         <div class="areaBox">
-            <p class="area-item">Trò chơi</p>
-            <p class="area-item">Vườn thú</p>
-            <p class="area-item">Cảnh đẹp</p>
-            <p class="area-item">Sân khấu</p>
-            <p class="area-item">Giáo dục trải nghiệm</p>
-            <p class="area-item">Ẩm thực</p>
+          @foreach ($all_area ?? [] as $area)
+            <p class="area-item">{{ $area -> areaName }}</p>
+          @endforeach
             <div class="line"></div>
         </div>
 
@@ -244,7 +243,7 @@
         <div class="list-location-SanKhau">
           <div class="column col-1">
             
-            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <p class="categoryName"></p>
             <div class="item-location">
               <div class="circle-location">01</div>
               <span class="item-location-text">Cá Chép Nhào Lộn</span>
@@ -252,7 +251,7 @@
           </div>
 
           <div class="column col-2">
-            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <p class="categoryName"></p>
             <div class="item-location">
               <div class="circle-location">14</div>
               <span class="item-location-text">Xem Phim Cinemax 8D</span>  
@@ -260,7 +259,7 @@
           </div>
 
           <div class="column col-3">
-            <p class="categoryName">GIẢI TRÍ</p>
+            <p class="categoryName"></p>
             <div class="item-location">
               <div class="circle-location">19</div>
               <span class="item-location-text">Băng Đăng</span>
@@ -268,10 +267,10 @@
           </div>
 
           <div class="column col-4">
-            <p class="categoryName">THIẾU NHI</p>
+            <p class="categoryName"></p>
             <div class="item-location">
               <div class="circle-location">23</div>
-              <div class="item-location-text">Ếch nhảy</div>
+              <div class="item-location-text">San khau</div>
             </div>
           </div>
         </div>
@@ -283,7 +282,7 @@
         <div class="list-location-GiaoDuc">
           <div class="column col-1">
             
-            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">01</div>
               <span class="item-location-text">Cá Chép Nhào Lộn</span>
@@ -291,7 +290,7 @@
           </div>
 
           <div class="column col-2">
-            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">14</div>
               <span class="item-location-text">Xem Phim Cinemax 8D</span>  
@@ -299,7 +298,7 @@
           </div>
 
           <div class="column col-3">
-            <p class="categoryName">GIẢI TRÍ</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">19</div>
               <span class="item-location-text">Băng Đăng</span>
@@ -307,7 +306,7 @@
           </div>
 
           <div class="column col-4">
-            <p class="categoryName">THIẾU NHI</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">23</div>
               <div class="item-location-text">Ếch nhảy</div>
@@ -322,7 +321,7 @@
         <div class="list-location-AmThuc">
           <div class="column col-1">
             
-            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">01</div>
               <span class="item-location-text">Cá Chép Nhào Lộn</span>
@@ -330,7 +329,7 @@
           </div>
 
           <div class="column col-2">
-            <p class="categoryName">TƯƠNG TÁC ẢO</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">14</div>
               <span class="item-location-text">Xem Phim Cinemax 8D</span>  
@@ -338,7 +337,7 @@
           </div>
 
           <div class="column col-3">
-            <p class="categoryName">GIẢI TRÍ</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">19</div>
               <span class="item-location-text">Băng Đăng</span>
@@ -346,10 +345,10 @@
           </div>
 
           <div class="column col-4">
-            <p class="categoryName">THIẾU NHI</p>
+            <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">23</div>
-              <div class="item-location-text">Ếch nhảy</div>
+              <div class="item-location-text">Ca chien</div>
             </div>
           </div>
         </div>

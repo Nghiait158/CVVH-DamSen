@@ -1,0 +1,243 @@
+.map{
+    margin: 24px;
+    /* background-color: aqua; */
+    position: relative;
+
+}
+.imgMap {
+    /* Thêm các thuộc tính CSS khác nếu cần */
+    width: 1800px;
+    height: 2448.206px; 
+}
+.text-location{
+    color: var(--pink-pink-500, #EC008C);
+    /* Nunito/23px/23px: SemiBold */
+    font-family: Nunito;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 34.5px */
+}
+.locationPoint {
+    position: absolute;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 21.822px;
+    border: 2px solid var(--pink-pink-500, #EC008C);
+    background: var(--White, #FFF);
+    z-index: 1; 
+    cursor: pointer;
+}
+.hidden {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: none;
+}
+.popup-location{
+    position: absolute;
+    display: none; /* Initially hidden */
+    width: 200px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    top: -70px; /* Position the popup above the locationPoint */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.l01{
+    left: 374px; top: 1603px; width: 44.9601px;
+}
+.l02{
+    left: 1204px; top: 505px;
+}
+.l03{
+    left: 291px; top: 1722px;
+}
+.l04{
+    left: 1596px; top: 1320px;
+}
+.l05{
+    left: 482px; top: 1587px;
+}
+.l06{
+    left: 922px; top: 1996px;
+}
+.l07{
+    left: 1487px; top: 1359px;
+}
+.l08{
+    left: 1370px; top: 1397px;
+}
+.l09{
+    left: 1608px; top: 1141px;
+}
+.l10{
+    left: 1339px; top: 336px;
+}
+.l11{
+    left: 1571px; top: 292px;
+}
+.l12{
+    left: 909px; top: 905px;
+}
+.l13{
+    left: 1332px; top: 1012px;
+}
+.l14{
+    left: 586px; top: 2092px;
+}
+.l15{
+    left: 513px; top: 2038px;
+}
+.l16{
+    left: 597px; top: 1969px;
+}
+.l17{
+    left: 692px; top: 2031px;
+}
+.l18{
+    left: 713px; top: 1377px;
+}
+.l19{
+    left: 1159px; top: 982px;
+}
+.l20{
+    left: 1388px; top: 1163px;
+}
+.l21{
+    left: 1067px; top: 2282px;
+}
+.l22{
+    left: 1272px; top: 1639px; 
+}
+.l23{
+    left: 795px; top: 2012px;
+}
+.l24{
+    left: 950px; top: 2088px;
+}
+.l25{
+    left: 807px; top: 1884px;
+}
+.l26{
+    left: 900px; top: 1846px;
+}
+.l27{
+    left: 666px; top: 1840px; 
+}
+.l28{
+    left: 932px; top: 1714px;
+}
+.l29{
+    left: 1112px; top: 1976px;
+}
+.l30{
+    left: 804px; top: 1708px;
+}
+.l31{
+    left: 791px; top: 1814px;
+}
+.l32{
+    left: 519px; top: 1908px;
+}
+.l33{
+    left: 1024px; top: 1930px; 
+}
+.l34{
+    left: 450px; top: 1682px;
+}
+.l35{
+    left: 1621px; top: 812px;
+}
+.l36{
+    left: 1630px; top: 666px;
+}
+.l37{
+    left: 1595px; top: 747px;
+}
+.l38{
+    left: 1495px; top: 609px;
+}
+.l39{
+    left: 1602px; top: 901px;
+}
+.l40{
+    left: 1705px; top: 774px;
+}
+.l41{
+    left: 438px; top: 1147px;
+}
+.l42{
+    left: 1480px; top: 713px;
+}
+.l43{
+    left: 166px; top: 1422px;
+}
+.l44{
+
+}
+.l45{
+    left: 714px; top: 779px;
+}
+.l46{
+    left: 405px; top: 1317px
+}
+.l47{
+    left: 562px; top: 1240px;
+}
+.l48{
+    left: 559px; top: 1038px;
+}
+.l49{
+    left: 571px; top: 941px;
+}
+.l50{
+    left: 710px; top: 1250px;
+}
+.l51{
+    left: 179px; top: 1227px;
+}
+.l52{
+    left: 395px; top: 1520px;
+}
+.l53{
+    left: 1684px; top: 1786px; 
+}
+.l54{
+    left: 825px; top: 1188px;
+}
+.l55{
+    left: 1101px; top: 1807px;
+}
+.l56{
+    left: 1340px; top: 696px;
+}
+.l57{
+    left: 973px; top: 1332px;
+}
+.l58{
+    left: 1237px; top: 1104px;
+}
+.l59{
+
+}
+.l60{
+    left: 1386px; top: 1815px;
+}
+.l61{
+    left: 374px; top: 1861px;
+}
+.l63{
+    left: 1678px; top: 1966px;
+}
+
+
