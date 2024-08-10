@@ -64,15 +64,15 @@ class CategoryController extends Controller
         return Redirect::to('category_manage');
 
     }
-    public function deleteCategory($areaID){
-        $area = Area::find($areaID);
-        if ($area) {
+    public function deleteCategory($categoryID){
+        $category = Category::find($categoryID);
+        if ($category) {
             // Xóa mục
-            $area->delete();
-            Session::flash('message', 'Đã xóa mục thành công.');
+            $category->delete();
+            Session::flash('message', 'Đã xóa thể loại thành công.');
         } else {
-            Session::flash('message', 'Mục không tồn tại.');
+            Session::flash('message', 'Thể loại không tồn tại.');
         }
-        return Redirect::to('area_manage');
+        return Redirect::to('category_manage');
     }
 }

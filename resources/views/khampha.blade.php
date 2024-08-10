@@ -6,7 +6,15 @@
 
     <div class="locationPoint l01">
         <p class="text-location">01</p>
-        <div class="popup-location hidden">Popup for 01</div>
+        <div class="popup-location hidden">
+            <div class="popup-card">
+                <div class="popup-cardTitle">khu 1</div>
+                <div class="popup-cardSubtitle">Trò chơi vượt tháp</div>
+            </div>
+            <button class="popup-cardButton">
+            <img class="popupImg" src="path-to-your-right-arrow-image.png" alt="Go">
+            </button>
+        </div>
     </div>
     <div class="locationPoint l02">
         <p class="text-location">02</p>
@@ -209,24 +217,17 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const locationPoints = document.querySelectorAll('.locationPoint');
-
-        locationPoints.forEach(point => {
-            const popup = point.querySelector('.popup-location');
-
-            point.addEventListener('click', function() {
-                // Hide all other popups
-                locationPoints.forEach(p => {
-                    if (p !== point) {
-                        p.querySelector('.popup-location').classList.add('hidden');
-                    }
-                });
-
-                // Toggle visibility of the current popup
-                popup.classList.toggle('hidden');
-            });
-        });
+document.querySelectorAll('.locationPoint').forEach(point => {
+    point.addEventListener('click', function() {
+        const popup = this.querySelector('.popup-location');
+        if (popup.classList.contains('hidden')) {
+            popup.classList.remove('hidden');
+            popup.style.display = 'block';
+        } else {
+            popup.classList.add('hidden');
+            popup.style.display = 'none';
+        }
     });
+});
 </script>
 @endsection 

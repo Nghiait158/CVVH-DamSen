@@ -25,10 +25,14 @@
                             <input type="text" value="{{ $editPosts -> title }}"  class="form-control" name="title"  id="title">
                         </div> --}}
                         <div class="form-group">
-                            <label for="areaName">Tên khu vưc(areaName)</label>
-                            <input type="text"  class="form-control" name="areaName"  id="areaName">
+                            <label for="areaID">areaID</label>
+                            <input type="text" value="{{ $editArea->areaID }}" class="form-control" name="areaID" id="areaID">
                         </div>
-                        
+
+                        <div class="form-group">
+                            <label for="areaName">Tên khu vưc(areaName)</label>
+                            <input type="text" value="{{ $editArea->areaName }}" class="form-control" name="areaName" id="areaName">
+                        </div>
                        
                         <button type="submit" name="updateArea" class="btn btn-info">cập nhật khu vực </button>
                         </form>

@@ -42,16 +42,17 @@
 .popup-location{
     position: absolute;
     display: none; /* Initially hidden */
+    align-items: center;
     width: 200px;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--white);
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    top: -70px; /* Position the popup above the locationPoint */
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 5;
+    /* top: -70px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
 }
 .l01{
     left: 374px; top: 1603px; width: 44.9601px;
@@ -239,5 +240,34 @@
 .l63{
     left: 1678px; top: 1966px;
 }
+
+.popup-card {
+display: flex;
+flex-direction: column;
+}
+
+.popup-cardTitle {
+font-weight: bold;
+font-size: 1.2em; /* Điều chỉnh theo ý bạn */
+}
+
+.popup-cardSubtitle {
+font-size: 1em; /* Nhỏ hơn .card-title */
+}
+
+.popup-cardButton {
+border-radius: 50%;
+background-color: green; /* Màu nền xanh lá */
+border: none; /* Loại bỏ viền mặc định của nút */
+padding: 10px; /* Điều chỉnh theo ý bạn */
+}
+
+.popup-cardButton,
+.popupImg {
+width: 20px; /* Điều chỉnh theo ý bạn */
+height: 20px; /* Điều chỉnh theo ý bạn */
+}
+  
+
 
 

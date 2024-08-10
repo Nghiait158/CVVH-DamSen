@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class LocationImage extends Model
 {
     use HasFactory;
-    use HasFactory;
 
     protected $table = 'location_images';
 

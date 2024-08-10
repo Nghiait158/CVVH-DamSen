@@ -52,7 +52,7 @@
             <td>
               <a href="{{ URL::to('/editCategory/'.$category->categoryID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              {{-- <a onclick="return confirm('Bạn có chắc là muốn xóa bài viết này ko?')" href="{{ URL::to('/deletePosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class=""> --}}
+              <a onclick="return confirm('Bạn có chắc là muốn xóa thể loại này ko?')" href="{{ URL::to('/deleteCategory/'.$category->categoryID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-times text-danger text"></i>
               </a>
             </td>

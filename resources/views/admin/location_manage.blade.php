@@ -30,23 +30,28 @@
       <table class="table table-striped b-t b-light">
         <thead>
           <tr>
-            <th>areaID</th>
-            <th>areaName</th>
+            <th>loID</th>
+            <th>loName</th>
+            <th>loDescription</th>
+            <th>loContent	</th>
+            <th>loDate</th>
+            <th>categoryID</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
-        @foreach ($allArea ?? [] as $area)
+        @foreach ($allLocation ?? [] as $location)
           <tr>
-            {{-- <td><label class="i-checks m-b-none"><input type="checkbox" name="recruit[]"><i></i></label></td> --}}
-            <td><span class="text-ellipsis">{{ $area->areaID }} </span></td>
-            <td><span class="text-ellipsis">{{ $area->areaName }}</span></td>
-            {{-- <td><span class="text-ellipsis">{{ $recruit -> numsOfRecruits }}</span></td> --}}
-
+            <td><span class="text-ellipsis">{{ $location->loID }} </span></td>
+            <td><span class="text-ellipsis">{{ $location->loName }}</span></td>
+            <td><span class="text-ellipsis">{{ $location->loDescription }}</span></td>
+            <td><span class="text-ellipsis">{{ $location->loContent }}</span></td>
+            <td><span class="text-ellipsis">{{ $location->loDate }}</span></td>
+            <td><span class="text-ellipsis">{{ $location->categoryID }}</span></td>
             <td>
-              {{-- <a href="{{ URL::to('/editPosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class=""> --}}
+              <a href="{{ URL::to('/editLocation/'.$location->loID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              {{-- <a onclick="return confirm('Bạn có chắc là muốn xóa bài viết này ko?')" href="{{ URL::to('/deletePosts/'.$post->postID) }}" class="active styling-edit" ui-toggle-class=""> --}}
+              <a onclick="return confirm('Bạn có chắc là muốn xóa bài viết này ko?')" href="{{ URL::to('/deleteLocation/'.$location->loID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-times text-danger text"></i>
               </a>
             </td>

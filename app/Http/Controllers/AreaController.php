@@ -37,6 +37,8 @@ class AreaController extends Controller
         $data= $request->all();
         $area= Area::find($areaID);
         $area->areaName=$data['areaName'];
+        $area->areaID=$data['areaID'];
+
         $area->save();
         Session::put('message','Chỉnh sửa khu vực thành công');
         return Redirect::to('area_manage');
