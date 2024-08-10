@@ -31,7 +31,7 @@
     border: 2px solid var(--pink-pink-500, #EC008C);
     background: var(--White, #FFF);
     z-index: 1; 
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .hidden {
     visibility: hidden;
@@ -43,17 +43,63 @@
     position: absolute;
     display: none; /* Initially hidden */
     align-items: center;
-    width: 200px;
+    /* width: 200px; */
     padding: 10px;
-    background-color: var(--white);
-    border: 1px solid #ccc;
+    background-color: whitesmoke;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 5;
+    z-index: 99; 
     /* top: -70px; */
     /* left: 50%; */
     /* transform: translateX(-50%); */
+    left: -88px; 
+    top: -118px; 
+    width: 256.433px; 
+    height: 69.331px;
 }
+.popup-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-base);
+    gap: var(--gap-9xs);
+}
+
+.popup-cardTitle {
+    position: relative;
+    line-height: 150%;
+    white-space: nowrap;
+    font-size: var(--nunito-16px-16px-regular-size);
+    color: var(--gray-gray-500);
+    font-weight: bold;
+}
+
+.popup-cardSubtitle {
+    position: relative;
+    font-size: 1em; /* Nhỏ hơn .card-title */
+    left: -3px; top: 16px;
+}
+
+.popup-cardButton {
+    position: relative;
+    border-radius: 50%;
+    background-color: green; /* Màu nền xanh lá */
+    border: none; /* Loại bỏ viền mặc định của nút */
+    padding: 10px; /* Điều chỉnh theo ý bạn */
+    left: 212px; top: -30px;
+    cursor: pointer;
+}
+.popupImg{
+    background-color: var(--white);
+}
+.popup-cardButton,
+.popupImg {
+width: 20px; /* Điều chỉnh theo ý bạn */
+height: 20px; /* Điều chỉnh theo ý bạn */
+}
+  
 .l01{
     left: 374px; top: 1603px; width: 44.9601px;
 }
@@ -241,33 +287,7 @@
     left: 1678px; top: 1966px;
 }
 
-.popup-card {
-display: flex;
-flex-direction: column;
-}
 
-.popup-cardTitle {
-font-weight: bold;
-font-size: 1.2em; /* Điều chỉnh theo ý bạn */
-}
-
-.popup-cardSubtitle {
-font-size: 1em; /* Nhỏ hơn .card-title */
-}
-
-.popup-cardButton {
-border-radius: 50%;
-background-color: green; /* Màu nền xanh lá */
-border: none; /* Loại bỏ viền mặc định của nút */
-padding: 10px; /* Điều chỉnh theo ý bạn */
-}
-
-.popup-cardButton,
-.popupImg {
-width: 20px; /* Điều chỉnh theo ý bạn */
-height: 20px; /* Điều chỉnh theo ý bạn */
-}
-  
 
 
 

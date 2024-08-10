@@ -94,17 +94,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>
-                        <span>Các khu vực</span>
+                        <span>Khu vực</span>
                     </a>
                     <ul class="sub">
                         {{-- <li><a href="{{URL::to('/manage-slider')}}">Profile</a></li> --}}
                         <li><a href="{{URL::to('/area_manage')}}">Quản lý các khu vực</a></li>
                         <li><a href="{{URL::to('/add_area')}}">Thêm khu vực</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Thể Loại</span>
+                    </a>
+                    <ul class="sub">
                         <li><a href="{{URL::to('/category_manage')}}">Quản lý các thể loại</a></li>
                         <li><a href="{{URL::to('/add_category')}}">Thêm thể loại</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Địa Điểm</span>
+                    </a>
+                    <ul class="sub">
                         <li><a href="{{URL::to('/location_manage')}}">Quản lý các địa điểm</a></li>
                         <li><a href="{{URL::to('/add_location')}}">Thêm địa điểm</a></li>
-                        
+                        <li><a href="{{URL::to('/locationImg_manage')}}">Quản lý hình ảnh địa điểm</a></li>
+                        <li><a href="{{URL::to('/add_locationImg')}}">Thêm hình ảnh địa điểm</a></li>
                     </ul>
                 </li>
                    
