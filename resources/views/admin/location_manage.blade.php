@@ -45,7 +45,9 @@
             <td><span class="text-ellipsis">{{ $location->loID }} </span></td>
             <td><span class="text-ellipsis">{{ $location->loName }}</span></td>
             <td><span class="text-ellipsis">{{ $location->loDescription }}</span></td>
-            <td><span class="text-ellipsis">{{ $location->loContent }}</span></td>
+            <td><span class="text-ellipsis"><?php echo $location->loContent ?></span></td>
+            
+            {{-- <td><span class="text-ellipsis">{{ $location->loContent }}</span></td> --}}
             <td><span class="text-ellipsis">{{ $location->loDate }}</span></td>
             <td><span class="text-ellipsis">{{ $location->categoryID }}</span></td>
             <td>

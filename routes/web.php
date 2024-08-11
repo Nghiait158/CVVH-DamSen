@@ -26,20 +26,11 @@ Route::get('/trangchu', [HomeController::class, 'index']);
 
 
 
+Route::get('/Extiny', [HomeController::class, 'tiny']);
+
 
 // -----------------Kham Pha------------------------------------------------
 Route::get('/khampha', [KhamPhaController::class, 'index']);
-
-
-
-
-
-
-
-
-
-
-
 
 
 //--------------------------------- Admin----------------

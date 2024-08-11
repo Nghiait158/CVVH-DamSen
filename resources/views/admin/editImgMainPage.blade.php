@@ -31,7 +31,6 @@
                             <label for="imgPath">Chọn hình ảnh thay thế(nếu có)</label>
                             <input type="file" value="{{ $editImgMainPage->imgPath }}" class="form-control" name="imgPath" id="imgPath" required>
                         </div>
-                       
                         <button type="submit" name="updateImgMainPage" class="btn btn-info">cập nhật hình ảnh </button>
                         </form>
                     </div>

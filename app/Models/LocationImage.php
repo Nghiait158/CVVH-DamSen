@@ -9,7 +9,7 @@ class LocationImage extends Model
 {
     use HasFactory;
 
-    protected $table = 'location_images';
+    protected $table = 'location_image';
 
     protected $primaryKey = 'loImgID';
 

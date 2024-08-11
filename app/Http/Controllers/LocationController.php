@@ -47,6 +47,7 @@ class LocationController extends Controller
             'all_cate' => $all_cate,
         ];
         return view('admin.editLocation', $data);
+        // return view('admin.editLocation', $data);
     }
     public function updateLocation(Request $request, $loID){
         $data= $request->all();

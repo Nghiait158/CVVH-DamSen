@@ -1,79 +1,86 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\LocationImage;
+use App\Models\Location;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 class LocationImgController extends Controller
 {
-    public function imgMainPage_manage(){ 
-        $allImgMainPage=ImgMainPage::all();
-        $manage_img= view('admin.imgMainPage_manage')->with('allImgMainPage', $allImgMainPage);
-        return view('admin.admin_layout')->with('admin.imgMainPage_manage',$manage_img);
+    public function locationImg_manage(){ 
+        $allLocationImg=LocationImage::all();
+        $manage_locationImg= view('admin.locationImg_manage')->with('allLocationImg', $allLocationImg);
+        return view('admin.admin_layout')->with('admin.locationImg_manage',$manage_locationImg);
     }
     public function index(){
-        // $data = $this->data();
-        return view('admin.add_imgMainPage');
+        $data = $this->data();
+        return view('admin.add_locationImg', $data);
     }
-        // function data() {
-        // $all_img = ImgMainPage::all();
-        // return [
-        //     'all_Cate' => $all_Cate,
-        // ];
-    // }
-    public function saveImgMainPage(Request $request){
+        function data() {
+        $all_location = Location::all();
+        // dd($all_location);
+        return [
+            'all_location' => $all_location,
+        ];
+    }
+    public function saveLocationImg(Request $request){
         //  $request->validate([
         //     'imgName' => 'required|string|max:255',
         //     'imgPath' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust the rules as needed
         // ]);
         $data = $request->all();
-        $img = new ImgMainPage();
-        $img->imgName = $data['imgName'];
-        // $img->imgPath = $data['imgPath'];
-        if ($request->hasFile('imgPath')) {
-            $get_image = $request->file('imgPath');
-            $new_image = $data['imgName'] . '.' . $get_image->getClientOriginalExtension();
+        $img = new LocationImage();
+        $img->loImgName = $data['loImgName'];
+        $img->loID = $data['loID'];
+        
+        if ($request->hasFile('loImgPath')) {
+            $get_image = $request->file('loImgPath');
+            $new_image = $data['loImgName'] . '.' . $get_image->getClientOriginalExtension();
             $get_image->move(public_path('frontEnd/img'), $new_image);
-            $img->imgPath = '/frontEnd/img/' . $new_image;
+            $img->loImgPath = '/frontEnd/img/' . $new_image;
         }
        
         $img->save();
         Session::put('message', 'Tải hình ảnh lên thành công');
-        return Redirect::to('add_imgMainPage');
+        return Redirect::to('add_locationImg');
     }
-    public function editImgMainPage($imgID){
-        $editImgMainPage = ImgMainPage::find($imgID);
+    public function editLocationImg($loImgID){
+        $editLocationImg = LocationImage::find($loImgID);
+        $all_location = Location::all();
         $data = [
-            'editImgMainPage' => $editImgMainPage,
+            'editLocationImg' => $editLocationImg,
+            'all_location'=> $all_location,
         ];
-        return view('admin.editImgMainPage', $data);
+        return view('admin.editLocationImg', $data);
     }
-    public function updateImgMainPage(Request $request, $imgID){
+    public function updateLocationImg(Request $request, $loImgID){
         $data= $request->all();
-        $img= ImgMainPage::find($imgID);
+        $img= LocationImage::find($loImgID);
         if (!$img) {
             return redirect()->back()->withErrors(['error' => 'Image not found']);
         }
-        $img->imgName = $data['imgName'];
-        if ($request->hasFile('imgPath')) {
-            // Delete old image if exists
-            if (file_exists(public_path($img->imgPath))) {
-                unlink(public_path($img->imgPath));
+        $img->loImgName = $data['loImgName'];
+        $img->loID = $data['loID'];
+        
+        if ($request->hasFile('loImgPath')) {
+            if (file_exists(public_path($img->loImgPath))) {
+                unlink(public_path($img->loImgPath));
             }
     
             // Process the new image
-            $image = $request->file('imgPath');
-            $imageName = $data['imgName'] . '.' . $image->getClientOriginalExtension();
+            $image = $request->file('loImgPath');
+            $imageName = $data['loImgName'] . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('frontEnd/img'), $imageName);
-            $img->imgPath = '/frontEnd/img/' . $imageName;
+            $img->loImgPath = '/frontEnd/img/' . $imageName;
         }
         $img->save();
         Session::put('message','Chỉnh sửa hình ảnh thành công');
-        return Redirect::to('imgMainPage_manage');
+        return Redirect::to('locationImg_manage');
 
     }
-    public function deleteImgMainPage($imgID){
-        $img = ImgMainPage::find($imgID);
+    public function deleteLocationImg($loImgID){
+        $img = LocationImage::find($loImgID);
         if ($img) {
             // Xóa mục
             $img->delete();
@@ -81,6 +88,6 @@ class LocationImgController extends Controller
         } else {
             Session::flash('message', 'Hình ảnh không tồn tại.');
         }
-        return Redirect::to('imgMainPage_manage');
+        return Redirect::to('locationImg_manage');
     }
 }
