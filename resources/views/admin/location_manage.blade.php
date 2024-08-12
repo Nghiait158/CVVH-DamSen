@@ -45,7 +45,11 @@
             <td><span class="text-ellipsis">{{ $location->loID }} </span></td>
             <td><span class="text-ellipsis">{{ $location->loName }}</span></td>
             <td><span class="text-ellipsis">{{ $location->loDescription }}</span></td>
-            <td><span class="text-ellipsis"><?php echo $location->loContent ?></span></td>
+            <td><span class="text-ellipsis"><?php echo $location->loContent ?>
+            <style>
+               {{ $location->loContentCss }}
+            </style>
+            </span></td>
             
             {{-- <td><span class="text-ellipsis">{{ $location->loContent }}</span></td> --}}
             <td><span class="text-ellipsis">{{ $location->loDate }}</span></td>
@@ -58,9 +62,11 @@
               </a>
             </td>
           </tr>
+          
         @endforeach
         </tbody>
       </table>
+      
     </div>
     <footer class="panel-footer">
       <div class="row">

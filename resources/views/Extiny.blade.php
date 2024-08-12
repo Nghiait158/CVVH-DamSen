@@ -63,7 +63,17 @@
             <label for="loDate">Ngày(loDate)</label>
             <input type="text" class="form-control" name="loDate"  id="loDate" >
         </div>
-        <h1>hello</h1>
+        <h1>-------------------------------------</h1>
+
+        <div class="form-group">
+          <label for="loContentCss">Content CSS(loContentCss)</label>
+          <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContentCss"  id="loContentCss"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="loContentJS">Content JS(loContentJS)</label>
+          <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContentJS"  id="loContentJS"></textarea>
+        </div>
         <div class="form-group">
             @csrf
         

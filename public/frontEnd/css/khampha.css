@@ -10,7 +10,7 @@
     height: 2448.206px; 
 }
 .text-location{
-    background-color: rgb(131, 176, 67);
+    /* background-color: rgb(131, 176, 67); */
     color: var(--pink-pink-500, #EC008C);
     /* Nunito/23px/23px: SemiBold */
     font-family: Nunito;

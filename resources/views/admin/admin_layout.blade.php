@@ -8,7 +8,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link rel="stylesheet" href="{{('/backend/css/bootstrap.min.css')}}" >
-
+<script src="https://cdn.tiny.cloud/1/1q890v2u4elq568lhuaho9gsb44mdc546lkuzh3v93gi841p/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 <!-- //bootstrap-css -->
 <!-- Custom CSS -->
 <link href="{{('/backend/css/style.css')}}" rel='stylesheet' type='text/css' />
@@ -29,7 +29,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="{{('/backend/js/jquery2.0.3.min.js')}}"></script>
 <script src="{{('/backend/js/raphael-min.js')}}"></script>
 <script src="{{('/backend/js/morris.js')}}"></script>
-
+<script type="text/javascript">
+    tinymce.init({
+      selector: '.tiny',
+      width: 990,
+      height: 500,
+      plugins: [
+        'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+        'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+        'media', 'table', 'emoticons', 'help'
+      ],
+      toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify code | ' +
+        'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+        'forecolor backcolor emoticons | help',
+      menu: {
+        favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+      },
+      menubar: 'favs file edit view insert format tools table help',
+      content_css: 'css/content.css'
+    });
+    </script>
 </head>
 <body>
 <section id="container">

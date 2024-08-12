@@ -1,0 +1,21 @@
+.contentKhamPhaChiTiet{
+    margin: 24px;
+    /* background-color: white; */
+    position: relative;
+}
+
+
+.imgHead {
+    position: absolute;
+    top: 72px; /* Khoảng cách từ div bên ngoài */
+    left: 0;
+    width: 1471px; /* Kích thước width */
+    height: 666px; /* Kích thước height */
+    overflow: hidden; /* Đảm bảo hình ảnh không vượt ra ngoài */
+}
+
+.imgHead img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh luôn đầy div */
+}

@@ -30,8 +30,20 @@
                         </div>
                         <div class="form-group">
                             <label for="loContent">Content(loContent)</label>
-                            <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContent"  id="loContent"></textarea>
+                            <textarea style="width: 994px; height: 237px;" class="form-control tiny" name="loContent" id="loContent" ></textarea>
+                
+                            {{-- <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContent"  id="loContent"></textarea> --}}
                         </div>
+                        <div class="form-group">
+                            <label for="loContentCss">Content CSS(loContentCss)</label>
+                            <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContentCss"  id="loContentCss"></textarea>
+                        </div>
+                            
+                        <div class="form-group">
+                            <label for="loContentJS">Content JS(loContentJS)</label>
+                            <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContentJS"  id="loContentJS"></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="loDate">Ngày(loDate)</label>
                             <input type="text" class="form-control" name="loDate"  id="loDate" >

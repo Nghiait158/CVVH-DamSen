@@ -33,6 +33,13 @@ Route::get('/Extiny', [HomeController::class, 'tiny']);
 Route::get('/khampha', [KhamPhaController::class, 'index']);
 
 
+// ----------------Khám phá chi tiết--------------------------------------
+
+
+Route::get('/khamphaChiTiet/{loID}', [KhamPhaController::class, 'khamphachitiet']);
+
+
+
 //--------------------------------- Admin----------------
 Route::get('/admin', [AdminManageController::class, 'index']);
 

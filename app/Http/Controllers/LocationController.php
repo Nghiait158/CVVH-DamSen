@@ -32,6 +32,9 @@ class LocationController extends Controller
         $location->loDescription = $data['loDescription'];
         $location->loContent = $data['loContent'];
         $location->loDate = $data['loDate'];
+        $location->loContentCss = $data['loContentCss'];
+        $location->loContentJS = $data['loContentJS'];
+        
         $location->categoryID = $data['categoryID'];
 
        

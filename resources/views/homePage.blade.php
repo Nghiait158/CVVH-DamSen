@@ -22,6 +22,7 @@
 
 
 
+
     {{-- JS --}}
     <script>
         let currentIndex = 0;
@@ -45,3 +46,5 @@
     </script>
     
 @endsection 
+
+
