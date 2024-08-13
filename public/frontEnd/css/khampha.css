@@ -35,12 +35,12 @@
     z-index: 1; 
     /* cursor: pointer; */
 }
-.hidden {
+/* .hidden {
     visibility: hidden;
     height: 0;
     overflow: hidden;
     display: none;
-}
+} */
 .popup-location{
     position: absolute;
     display: none; /* Initially hidden */

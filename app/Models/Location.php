@@ -25,4 +25,8 @@ class Location extends Model
     {
         return $this->belongsTo(Category::class, 'categoryID', 'categoryID');
     }
+    public function images()
+    {
+        return $this->hasMany(LocationImage::class, 'loID', 'loID');
+    }
 }

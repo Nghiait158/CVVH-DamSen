@@ -1,16 +1,19 @@
 .contentKhamPhaChiTiet{
-    margin: 24px;
-    /* background-color: white; */
+    background-color: white;
+    margin: 24px 24px 24px 24px;
+    width: 1808px;
+    height: auto;
+    flex-shrink: 0;
+    /* z-index: 33; */
     position: relative;
 }
 
 
 .imgHead {
     position: absolute;
-    top: 72px; /* Khoảng cách từ div bên ngoài */
-    left: 0;
-    width: 1471px; /* Kích thước width */
-    height: 666px; /* Kích thước height */
+    margin: 72px 72px 0 72px;
+    width: 1664px;
+    height: 666px;
     overflow: hidden; /* Đảm bảo hình ảnh không vượt ra ngoài */
 }
 
@@ -18,4 +21,115 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Đảm bảo hình ảnh luôn đầy div */
+    /* position: relative; left: 165px; top: 4px; */
+}
+.locationTitle-khamphachititet{
+    color: var(--heading-text-color, #259E58);
+    font-family: Bangers;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.introduce-location {
+    /* background-color: aqua; */
+    position: absolute;
+    left: 72px;
+    top: 670px;
+    width: 398px;
+    height: 102px;
+    /* gap:10px; */
+}
+.linebw{
+    position: relative;
+    top:-100px;
+    width: 398px;
+    height: 5px;
+    background: #259E58;
+}
+
+.etitle{
+    position: relative;
+    /* left: 30px;  */
+    top:-90px;
+    color: var(--pink-pink-500, #EC008C);
+
+/* Nunito/16px/16px: SemiBold */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+}
+.areaTitle-khamphachitiet{
+    position: relative;
+    left: 30px; 
+    top:-131px;
+    color: var(--pink-pink-500, #EC008C);
+
+/* Nunito/16px/16px: SemiBold */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 24px */
+}
+.locationDate-khamphachitiet{
+    position: relative;
+    left: 125px; 
+    top:-171px;
+    color: var(--gray-gray-500, #666);
+
+/* Nunito/16px/16px: Regular */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.desc{
+    color: var(--gray-gray-500, #666);
+    width: 227px;
+/* Nunito/16px/16px: Regular */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+
+.description-location {
+    position: absolute;
+    left: 1216px;
+    top: 756px;
+    width: 227px;
+    /* Thay đổi chiều cao thành auto để phù hợp với nội dung */
+    height: auto; 
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Đảm bảo không bị overflow ẩn */
+    overflow: visible; 
+}
+
+.linebw2 {
+    width: 227px; /* Cập nhật kích thước để phù hợp với phần tử chứa */
+    height: 2px;
+    background: #259E58;
+    margin-bottom: 8px; /* Đảm bảo có khoảng cách với phần tử phía dưới */
+    position: relative; /* Đảm bảo vị trí tương đối */
+    z-index: 10; /* Đảm bảo hiển thị trên các phần tử khác nếu cần */
+}
+
+.contentLocation-khamphachitiet{
+    position: absolute;
+    /* background-color: aqua; */
+    left: 72px;
+    top: 1006px;
+    right: 72px;
+    bottom: 72px;
+    width: 1664px;
+    height: 1664px;
+    flex-wrap: wrap;
 }

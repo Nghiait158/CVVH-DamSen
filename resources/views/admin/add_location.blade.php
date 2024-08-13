@@ -20,6 +20,10 @@
                     <div class="position-center">
                         <form role="form" action="{{URL::to('/saveLocation')}}" method="post">
                             {{ csrf_field() }}
+                         <div class="form-group">
+                                <label for="loName">ID địa điểm(loID)</label>
+                                <input type="text" class="form-control" name="loID"  id="loID"  >
+                        </div>
                         <div class="form-group">
                             <label for="loName">Tên địa điểm (loName)</label>
                             <input type="text" class="form-control" name="loName"  id="loName"  >

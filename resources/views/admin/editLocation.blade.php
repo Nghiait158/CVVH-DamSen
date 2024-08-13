@@ -34,8 +34,20 @@
                         </div>
                         <div class="form-group">
                             <label for="loContent">Content(loContent)</label>
-                            <textarea style="width: 994px; height: 237px;" type="text" value="{{ $editLocation->loContent }}" class="form-control" name="loContent"  id="loContent"></textarea>
+                            <textarea style="width: 994px; height: 237px;" value="{{ $editLocation->loContent }}" class="form-control tiny" name="loContent" id="loContent" ></textarea>
+                
+                            {{-- <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="loContent"  id="loContent"></textarea> --}}
                         </div>
+                        <div class="form-group">
+                            <label for="loContentCss">Content CSS(loContentCss)</label>
+                            <textarea style="width: 994px; height: 237px;"value="{{ $editLocation->loContentCss }}" type="text" class="form-control" name="loContentCss"  id="loContentCss"></textarea>
+                        </div>
+                            
+                        <div class="form-group">
+                            <label for="loContentJS">Content JS(loContentJS)</label>
+                            <textarea style="width: 994px; height: 237px;" value="{{ $editLocation->loContentJS }}" type="text" class="form-control" name="loContentJS"  id="loContentJS"></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label for="loDate">Ngày(loDate)</label>
                             <input type="text" value="{{ $editLocation->loDate }}" class="form-control" name="loDate"  id="loDate" >

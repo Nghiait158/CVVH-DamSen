@@ -28,6 +28,7 @@ class LocationController extends Controller
 
         $data = $request->all();
         $location = new Location();
+        $location->loID  = $data['loID'];
         $location->loName = $data['loName'];
         $location->loDescription = $data['loDescription'];
         $location->loContent = $data['loContent'];
@@ -55,10 +56,14 @@ class LocationController extends Controller
     public function updateLocation(Request $request, $loID){
         $data= $request->all();
         $location= Location::find($loID);
+        
+        $location->loID  = $data['loID'];
         $location->loName = $data['loName'];
         $location->loDescription = $data['loDescription'];
         $location->loContent = $data['loContent'];
         $location->loDate = $data['loDate'];
+        $location->loContentCss = $data['loContentCss'];
+        $location->loContentJS = $data['loContentJS'];
         $location->categoryID = $data['categoryID'];
         $location->save();
         Session::put('message','Chỉnh sửa địa điểm thành công');
