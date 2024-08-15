@@ -52,9 +52,9 @@
                   <li class="sub-menu">
                       <a href="{{URL::to('/gioithieu')}}">Giới thiệu </a>
                       <ul class="sub" style="left: 185px; top: -33px;">
-                        <li><a href="">Lịch sử hình thành</a></li>
-                        <li><a href="">Thành viên</a></li>
-                        <li><a href="">Chính sách bảo mật</a></li>    
+                        <li><a href="{{URL::to('/lichsuhinhthanh')}}">Lịch sử hình thành</a></li>
+                        <li><a href="{{URL::to('/')}}">Thành viên</a></li>
+                        <li><a href="{{URL::to('/chinhsachbaomat')}}">Chính sách bảo mật</a></li>    
                       </ul>
                   </li>
                   <li class="sub-menu">

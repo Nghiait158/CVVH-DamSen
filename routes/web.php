@@ -4,6 +4,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GioiThieuController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\LichSuHinhThanhController;
+use App\Http\Controllers\ChinhSachBaoMatController;
 use App\Http\Controllers\LocationImgController;
 use App\Http\Controllers\ImgMainPageController;
 use App\Http\Controllers\KhamPhaController;
@@ -39,6 +41,13 @@ Route::get('/khamphaChiTiet/{loID}', [KhamPhaController::class, 'khamphachitiet'
 // ----------------------Giới thiệu------------------------------------
 Route::get('/gioithieu', [GioiThieuController::class, 'index']);
 
+// --------------------------Lịch sử hình thành ------------------------
+Route::get('/lichsuhinhthanh', [LichSuHinhThanhController::class, 'index']);
+
+
+
+// --------------------------Chính sách bảo mật  ------------------------
+Route::get('/chinhsachbaomat', [ChinhSachBaoMatController::class, 'index']);
 
 
 
