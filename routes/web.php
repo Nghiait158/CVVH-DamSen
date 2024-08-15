@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\GioiThieuController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\LocationImgController;
 use App\Http\Controllers\ImgMainPageController;
@@ -32,11 +33,14 @@ Route::get('/Extiny', [HomeController::class, 'tiny']);
 // -----------------Kham Pha------------------------------------------------
 Route::get('/khampha', [KhamPhaController::class, 'index']);
 
-
 // ----------------Khám phá chi tiết--------------------------------------
-
-
 Route::get('/khamphaChiTiet/{loID}', [KhamPhaController::class, 'khamphachitiet']);
+
+// ----------------------Giới thiệu------------------------------------
+Route::get('/gioithieu', [GioiThieuController::class, 'index']);
+
+
+
 
 
 

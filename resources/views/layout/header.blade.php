@@ -50,8 +50,8 @@
                       <a href="{{URL::to('/khampha')}}">Khám Phá</a>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;">Giới thiệu </a>
-                      <ul class="sub">
+                      <a href="{{URL::to('/gioithieu')}}">Giới thiệu </a>
+                      <ul class="sub" style="left: 185px; top: -33px;">
                         <li><a href="">Lịch sử hình thành</a></li>
                         <li><a href="">Thành viên</a></li>
                         <li><a href="">Chính sách bảo mật</a></li>    
@@ -59,7 +59,7 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;">Giá vé </a>
-                      <ul class="sub">
+                      <ul class="sub" style="will-change: top, left; left: 187px; top: -55px;">
                           <li><a href="">Vé trong công viên</a></li>
                           <li><a href="">Vé tập thể</a></li>
                           <li><a href="">Vé dịch vụ</a></li>                          
@@ -69,10 +69,10 @@
                   <li class="sub-menu">
                     <a href="javascript:;">Sự Kiện </a>
                 </li>
-                <div class="image-container">
+                <div class="image-containerHeader">
                   <img class="damSenPark" loading="lazy" alt="" src="{{ ('/frontEnd/img/damSenPark.png') }}">
                   <img class="logoDamSen" style="position: relative; left: -7px; top: -3px;" loading="lazy" alt="" src="{{ ('/frontEnd/img/logoDamSen.png') }}">
-                  <div class="social-logos">
+                  <div class="social-logosHeader">
                     <img class="logoFb" loading="lazy" alt="" src="{{ ('/frontEnd/img/logoFb.png') }}">
                     <img class="logoIg" loading="lazy" alt="" src="{{ ('/frontEnd/img/logoIg.png') }}">
                     <img class="logoYoutube" loading="lazy" alt="" src="{{ ('/frontEnd/img/logoYoutube.png') }}">

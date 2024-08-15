@@ -81,7 +81,7 @@ ul {
     display: block;
 }
 
-.image-container {
+.image-containerHeader {
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -92,7 +92,7 @@ ul {
 .logoDamSen {
     margin: 10px 0;
 }
-.social-logos {
+.social-logosHeader {
     display: flex;
     justify-content: space-between; 
     width: 130px; 
