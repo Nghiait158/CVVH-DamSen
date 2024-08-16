@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GioiThieuController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\GiaVeController;
 use App\Http\Controllers\LichSuHinhThanhController;
 use App\Http\Controllers\ChinhSachBaoMatController;
 use App\Http\Controllers\LocationImgController;
@@ -89,9 +90,6 @@ Route::post('/updateLocationImg/{loImgID}', [LocationImgController::class, 'upda
 Route::get('/deleteLocationImg/{loImgID}', [LocationImgController::class, 'deleteLocationImg']);
 
 
-
-
-
 // --------------------------imgMainPage----------------------------------------
 Route::get('/imgMainPage_manage', [ImgMainPageController::class, 'imgMainPage_manage']);
 Route::get('/add_imgMainPage', [ImgMainPageController::class, 'index']);
@@ -99,6 +97,15 @@ Route::post('/saveImgMainPage', [ImgMainPageController::class, 'saveImgMainPage'
 Route::get('/editImgMainPage/{imgID}', [ImgMainPageController::class, 'editImgMainPage']);
 Route::post('/updateImgMainPage/{imgID}', [ImgMainPageController::class, 'updateImgMainPage']);
 Route::get('/deleteImgMainPage/{imgID}', [ImgMainPageController::class, 'deleteImgMainPage']);
+
+
+// ----------------------------Ticket----------GiaVeController-------------
+Route::get('/ticket_manage', [GiaVeController::class, 'ticket_manage']);
+Route::get('/add_ticket', [GiaVeController::class, 'index']);
+Route::post('/saveTicket', [GiaVeController::class, 'saveTicket']);
+Route::get('/editTicket/{ticketID}', [GiaVeController::class, 'editTicket']);
+Route::post('/updateTicket/{ticketID}', [GiaVeController::class, 'updateTicket']);
+Route::get('/deleteTicket/{ticketID}', [GiaVeController::class, 'deleteTicket']);
 
 
 

@@ -15,7 +15,9 @@ class Ticket extends Model
     protected $fillable = [
         'ticketName',
         'ticketDescription',
-        'ticketContent'
+        'ticketContent',
+        'ticketContentCss', 
+        'ticketContentJS', 
     ];
 
     public function images()

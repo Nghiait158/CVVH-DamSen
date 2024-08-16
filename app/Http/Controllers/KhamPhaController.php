@@ -33,11 +33,27 @@ class KhamPhaController extends Controller
         // $locationDetail = Location::find($loID);
         $locationDetail = Location::with('images')->find($loID);
         $areaName = $locationDetail ? $locationDetail->category->area->areaName : 'N/A';
+
+        // Lấy các địa điểm với categoryID khác nhau
+        $randomLocations = Location::where('loID', '<>', $loID) // Loại bỏ địa điểm hiện tại
+        ->with(['images' => function($query) {
+            $query->limit(1); // Lấy tối đa 1 hình ảnh cho mỗi địa điểm
+        }, 'category.area']) // Eager load category và area
+        ->inRandomOrder() // Lấy ngẫu nhiên
+        ->get()
+        ->groupBy('categoryID') // Nhóm theo categoryID
+        ->take(4) // Chọn 4 nhóm khác nhau
+        ->flatMap(function ($group) {
+            return $group->take(1); // Lấy một địa điểm từ mỗi nhóm
+        });
+        // Chọn 4 địa điểm ngẫu nhiên với categoryID khác nhau
+        // $randomLocations = $categories->unique('categoryID')->take(4);
         
         $data = [
             'areaName'=>$areaName,
             'locationDetail' => $locationDetail,
             'images' => $locationDetail ? $locationDetail->images : [],
+            'randomLocations' => $randomLocations
         ];
         // dd($images);
         return view('khamphaChiTiet', $data);
