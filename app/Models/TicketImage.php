@@ -9,7 +9,7 @@ class TicketImage extends Model
 {
     use HasFactory;
 
-    protected $table = 'ticket_image';
+    protected $table = 'ticket_images';
 
     protected $primaryKey = 'ticketImgID';
 

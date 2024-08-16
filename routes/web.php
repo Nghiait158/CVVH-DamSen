@@ -6,6 +6,8 @@ use App\Http\Controllers\GioiThieuController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\GiaVeController;
 use App\Http\Controllers\LichSuHinhThanhController;
+use App\Http\Controllers\TicketImgController;
+use App\Http\Controllers\VeChiTietController;
 use App\Http\Controllers\ChinhSachBaoMatController;
 use App\Http\Controllers\LocationImgController;
 use App\Http\Controllers\ImgMainPageController;
@@ -45,10 +47,12 @@ Route::get('/gioithieu', [GioiThieuController::class, 'index']);
 // --------------------------Lịch sử hình thành ------------------------
 Route::get('/lichsuhinhthanh', [LichSuHinhThanhController::class, 'index']);
 
-
-
 // --------------------------Chính sách bảo mật  ------------------------
 Route::get('/chinhsachbaomat', [ChinhSachBaoMatController::class, 'index']);
+
+
+// ------------------------Vé Chi tiet --------------------------
+Route::get('/vechitiet/{ticketID}', [VeChiTietController::class, 'index']);
 
 
 
@@ -107,5 +111,14 @@ Route::get('/editTicket/{ticketID}', [GiaVeController::class, 'editTicket']);
 Route::post('/updateTicket/{ticketID}', [GiaVeController::class, 'updateTicket']);
 Route::get('/deleteTicket/{ticketID}', [GiaVeController::class, 'deleteTicket']);
 
+
+
+// -------------------------------TicketImg-------------
+Route::get('/ticketImg_manage', [TicketImgController::class, 'ticketImg_manage']);
+Route::get('/add_ticketImg', [TicketImgController::class, 'index']);
+Route::post('/saveTicketImg', [TicketImgController::class, 'saveTicketImg']);
+Route::get('/editTicketImg/{ticketImgID}', [TicketImgController::class, 'editTicketImg']);
+Route::post('/updateTicketImg/{ticketImgID}', [TicketImgController::class, 'updateTicketImg']);
+Route::get('/deleteTicketImg/{ticketImgID}', [TicketImgController::class, 'deleteTicketImg']);
 
 

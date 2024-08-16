@@ -1,4 +1,4 @@
-@extends('admin.admin_layout')
+editTicket@extends('admin.admin_layout')
 @section('admin_content')
 
 <div class="row">

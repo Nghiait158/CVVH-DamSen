@@ -22,7 +22,7 @@ class GiaVeController extends Controller
             'all_ticket' => $all_ticket,
         ];
     }
-    public function saveLocation(Request $request){
+    public function saveTicket(Request $request){
 
         $data = $request->all();
         $ticket = new Ticket();
@@ -31,7 +31,6 @@ class GiaVeController extends Controller
         $ticket->ticketDescription = $data['ticketDescription'];
         $ticket->ticketContent = $data['ticketContent'];
         $ticket->ticketContentCss = $data['ticketContentCss'];
-        $ticket->loContentCss = $data['loContentCss'];
         $ticket->ticketContentJS = $data['ticketContentJS'];
         
         $ticket->ticketID = $data['ticketID'];
@@ -41,42 +40,38 @@ class GiaVeController extends Controller
         Session::put('message', 'Tải vé lên thành công');
         return Redirect::to('add_ticket');
     }
-    public function editLocation($loID){
-        $editLocation = Location::find($loID);
-        $all_cate = Category::all();
+    public function editTicket($ticketID){
+        $editTicket = Ticket::find($ticketID);
         $data = [
-            'editLocation' => $editLocation,
-            'all_cate' => $all_cate,
+            'editTicket' => $editTicket,
         ];
-        return view('admin.editLocation', $data);
-        // return view('admin.editLocation', $data);
+        return view('admin.editTicket', $data);
     }
-    public function updateLocation(Request $request, $loID){
+    public function updateTicket(Request $request, $ticketID){
         $data= $request->all();
-        $location= Location::find($loID);
+        $ticket= Ticket::find($ticketID);
         
-        $location->loID  = $data['loID'];
-        $location->loName = $data['loName'];
-        $location->loDescription = $data['loDescription'];
-        $location->loContent = $data['loContent'];
-        $location->loDate = $data['loDate'];
-        $location->loContentCss = $data['loContentCss'];
-        $location->loContentJS = $data['loContentJS'];
-        $location->categoryID = $data['categoryID'];
-        $location->save();
-        Session::put('message','Chỉnh sửa địa điểm thành công');
-        return Redirect::to('location_manage');
+        $ticket->ticketID  = $data['ticketID'];
+        $ticket->ticketName = $data['ticketName'];
+        $ticket->ticketDescription = $data['ticketDescription'];
+        $ticket->ticketContent = $data['ticketContent'];
+        $ticket->ticketContentCss = $data['ticketContentCss'];
+        $ticket->ticketContentJS = $data['ticketContentJS'];
+
+        $ticket->save();
+        Session::put('message','Chỉnh sửa vé thành công');
+        return Redirect::to('ticket_manage');
 
     }
-    public function deleteLocation($loID){
-        $location = Location::find($loID);
-        if ($location) {
+    public function deleteTicket($ticketID){
+        $ticket = Ticket::find($ticketID);
+        if ($ticket) {
             // Xóa mục
-            $location->delete();
-            Session::flash('message', 'Đã xóa địa điểm thành công.');
+            $ticket->delete();
+            Session::flash('message', 'Đã xóa vé thành công.');
         } else {
-            Session::flash('message', 'Địa điểm không tồn tại.');
+            Session::flash('message', 'Vé không tồn tại.');
         }
-        return Redirect::to('location_manage');
+        return Redirect::to('ticket_manage');
     }
 }

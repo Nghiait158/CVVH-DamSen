@@ -1,4 +1,3 @@
-
 @extends('admin.admin_layout')
 @section('admin_content')
 
@@ -6,7 +5,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Thêm loại vé vào cơ sở dữ liệu  
+                    Cập nhật địa điểm vào cơ sở dữ liệu  
                 </header>
                  <?php
                     $message = Session::get('message');
@@ -16,40 +15,40 @@
                     }
                     ?>
                 <div class="panel-body">
+                    {{-- @foreach($allArea as $key => $area) --}}
 
                     <div class="position-center">
-                        <form role="form" action="{{URL::to('/saveTicket')}}" method="post">
+                        <form role="form" action="{{URL::to('/updateTicket/'.$editTicket-> ticketID )}}" method="post">
                             {{ csrf_field() }}
-                         <div class="form-group">
-                                <label for="ticketID">ID vé(ticketID)</label>
-                                <input type="text" class="form-control" name="ticketID"  id="ticketID"  >
+                        <div class="form-group">
+                            <label for="ticketID">ID địa điểm(ticketID )</label>
+                            <input type="text" value="{{ $editTicket->ticketID  }}" class="form-control" name="ticketID"  id="ticketID"  >
                         </div>
                         <div class="form-group">
                             <label for="ticketName">Tên vé(ticketName	)</label>
-                            <input type="text" class="form-control" name="ticketName"  id="ticketName" >
+                            <input type="text" value="{{ $editTicket->ticketName  }}" class="form-control" name="ticketName"  id="ticketName" >
                         </div>
                         <div class="form-group">
                             <label for="ticketDescription">Mô tả vé(ticketDescription)</label>
-                            <input type="text" class="form-control" name="ticketDescription"  id="ticketDescription" >
+                            <input type="text" value="{{ $editTicket->ticketDescription  }}" class="form-control" name="ticketDescription"  id="ticketDescription" >
                         </div>
                         <div class="form-group">
                             <label for="ticketContent">Content(ticketContent)</label>
-                            <textarea style="width: 994px; height: 237px;" class="form-control tiny" name="ticketContent" id="ticketContent" ></textarea>
+                            <textarea style="width: 994px; height: 237px;" value="{{ $editTicket->ticketContent  }}" class="form-control tiny" name="ticketContent" id="ticketContent" ></textarea>
                         </div>
                         <div class="form-group">
                             <label for="ticketContentCss">Content CSS(ticketContentCss)</label>
-                            <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="ticketContentCss"  id="ticketContentCss"></textarea>
+                            <textarea style="width: 994px; height: 237px;" value="{{ $editTicket->ticketContentCss  }}" type="text" class="form-control" name="ticketContentCss"  id="ticketContentCss"></textarea>
                         </div>
                             
                         <div class="form-group">
                             <label for="ticketContentJS">Content JS(ticketContentJS)</label>
-                            <textarea style="width: 994px; height: 237px;" type="text" class="form-control" name="ticketContentJS"  id="ticketContentJS"></textarea>
+                            <textarea style="width: 994px; height: 237px;" type="text" value="{{ $editTicket->ticketContentJS  }}" class="form-control" name="ticketContentJS"  id="ticketContentJS"></textarea>
                         </div>
-
-                        <button type="submit" name="add_ticket" class="btn btn-info">Thêm vé</button>
+                        <button type="submit" name="updateTicket" class="btn btn-info">Cập nhật Vé </button>
                         </form>
                     </div>
-
+                    {{-- @endforeach --}}
                 </div>
             </section>
 </div>    

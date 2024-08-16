@@ -1,0 +1,81 @@
+.contentVeChiTiet {
+    background-color: #ffffff; /* màu trắng */
+    width: 1808px; /* chiều rộng */
+    margin: 24px; /* khoảng cách bên ngoài */
+    height: auto;
+    position: absolute;
+}
+
+.imgHead-VeChiTiet{
+    position: relative;
+    margin: 72px 166px 0 166px;
+    width: 1664px;
+    height: 666px;
+    zoom: -3;
+}
+.introduce-ticket{
+    position: relative;
+    /* background-color: aqua; */
+    width: auto;
+    max-width: 480px;
+    height: 102px;
+    margin: 50px 166px 0 166px;
+}
+.linebw-VeChiTiet{
+    position: relative;
+    height: 5px;
+    background: #259E58;
+    margin: 8px 0;
+}
+.ticketName-VeChiTiet{
+    color: var(--heading-text-color, #259E58);
+    font-family: Bangers;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 2px; /* Khoảng cách phía dưới */
+}
+.introduceRight-ticket{
+    position: absolute;
+    top: 770px; /* Cách phần tử div bên trên 12px */
+    right: 250px; /* Cách bên phải 171px */ 
+    height: 97px;
+    width: 227px;
+    padding: 4px 0px;
+    /* background-color: aqua; */
+}
+.mota-VeChiTiet{
+    color: var(--gray-gray-600, #4D4D4D);
+    font-family: Nunito;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 33px */   
+    margin-bottom: 2px;
+}
+.linebw2-VeChiTiet{ 
+    position: relative;
+    height: 2px;
+    background: #259E58;
+    margin: 8px 0;
+}
+    
+.DescTicket-VeChiTiet{
+    color: var(--gray-gray-500, #666);
+
+    /* Nunito/16px/16px: Regular */
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    margin-bottom: 2px; /* Khoảng cách phía dưới */
+}
+.content-VeChiTiet{
+    position: relative;
+    margin: 72px 166px 0 166px;
+    width: 1480px;
+    height: auto;
+    /* background-color: aqua; */
+}

@@ -153,6 +153,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <ul class="sub">
                         <li><a href="{{URL::to('/ticket_manage')}}">Quản lý các loại vé</a></li>
                         <li><a href="{{URL::to('/add_ticket')}}">Thêm vé</a></li>
+                        <li><a href="{{URL::to('/ticketImg_manage')}}">Quản lý hình ảnh loại vé</a></li>
+                        <li><a href="{{URL::to('/add_ticketImg')}}">Thêm hình ảnh loại vé</a></li>
                     </ul>
                 </li>
                    
@@ -167,33 +169,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="{{URL::to('/add_imgMainPage')}}">Thêm hình ảnh</a></li>
                     </ul>
                 </li>
-                 <li class="sub-menu">
-                    {{-- <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>Tuyển Dụng</span>
-                    </a> --}}
-                    <ul class="sub">
-                        <li><a href="{{URL::to('/job_manage')}}">Quản Lí Tuyển Dụng</a></li>
-                        <li><a href="{{URL::to('/add_recruitments')}}">Thêm Bài Viết Tuyển Dụng</a></li>
-                        
-                        <li><a href="{{URL::to('/employee')}}">Nhân Viên</a></li>
 
-                        {{-- <li><a href="{{URL::to('/employee')}}">Nhân Viên</a></li> --}}
-                        
-                    </ul>
-                </li>
-                 <li class="sub-menu">
-                    {{-- <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>Frontend</span>
-                    </a> --}}
-                    <ul class="sub">
-                        <li><a href="{{URL::to('/manageImgPage')}}">Quản lý Hình ảnh Page</a></li>
-                        
-                        
-                      
-                    </ul>
-                </li>
                 
              
             </ul>            </div>
