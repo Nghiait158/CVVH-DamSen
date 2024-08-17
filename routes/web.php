@@ -35,6 +35,7 @@ Route::get('/trangchu', [HomeController::class, 'index']);
 
 
 Route::get('/Extiny', [HomeController::class, 'tiny']);
+Route::get('/test', [HomeController::class, 'test']);
 
 
 // -----------------Kham Pha------------------------------------------------
@@ -136,7 +137,7 @@ Route::get('/deleteEvent/{eID}', [EventController::class, 'deleteEvent']);
 // -----------------------------------EventImg------------------------------
 Route::get('/eventImg_manage', [EventImgController::class, 'eventImg_manage']);
 Route::get('/add_eventImg', [EventImgController::class, 'index']);
-Route::post('/saveEventImg', [EventImgController::class, 'saveEvent']);
+Route::post('/saveEventImg', [EventImgController::class, 'saveEventImg']);
 Route::get('/editEventImg/{eImgID}', [EventImgController::class, 'editEventImg']);
 Route::post('/updateEventImg/{eImgID}', [EventImgController::class, 'updateEventImg']);
 Route::get('/deleteEventImg/{eImgID}', [EventImgController::class, 'deleteEventImg']);
