@@ -63,9 +63,11 @@
                       <a href="javascript:;">Giá vé </a>
                       <ul class="sub" style="will-change: top, left; left: 187px; top: -55px;">
                           <li><a href="{{URL::to('/vechitiet/1')}}">Vé trong công viên</a></li>
-                          <li><a href="{{URL::to('/vechitiet/2')}}">Vé tập thể</a></li>
-                          <li><a href="{{URL::to('/vechitiet/3')}}">Vé dịch vụ</a></li>                          
-                          <li><a href="{{URL::to('/vechitiet/4')}}">Vé tập thể dục</a></li>                          
+                          <li><a href="{{URL::to('/vechitiet/2')}}">Vé tập thể dục</a></li>  
+                          <li><a href="{{URL::to('/vechitiet/3')}}">Vé dịch vụ</a></li>  
+                          <li><a href="{{URL::to('/vechitiet/4')}}">Vé tập thể</a></li>
+                                                  
+                                                  
                       </ul>
                   </li>
                   <li class="sub-menu">

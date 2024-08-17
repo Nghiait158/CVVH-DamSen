@@ -16,16 +16,23 @@
       <table class="table table-striped b-t b-light">
         <thead>
           <tr>
+            <th style="width:30px;"></th>
             <th>ticketID</th>
             <th>ticketName</th>
             <th>ticketDescription</th>
             <th>ticketContent</th>
-            <th style="width:30px;"></th>
           </tr>
         </thead>
         <tbody>
         @foreach ($allTicket ?? [] as $ticket)
           <tr>
+            <td>
+              <a href="{{ URL::to('/editTicket/'.$ticket->ticketID) }}" class="active styling-edit" ui-toggle-class="">
+                <i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              <a onclick="return confirm('Bạn có chắc là muốn xóa loại vé này ko?')" href="{{ URL::to('/deleteTicket/'.$ticket->ticketID) }}" class="active styling-edit" ui-toggle-class="">
+                <i class="fa fa-times text-danger text"></i>
+              </a>
+            </td>
             <td><span class="text-ellipsis">{{ $ticket->ticketID }} </span></td>
             <td><span class="text-ellipsis">{{ $ticket->ticketName }}</span></td>
             <td><span class="text-ellipsis">{{ $ticket->ticketDescription }}</span></td>
@@ -37,13 +44,7 @@
             </span></td>
             
 
-            <td>
-              <a href="{{ URL::to('/editTicket/'.$ticket->ticketID) }}" class="active styling-edit" ui-toggle-class="">
-                <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-              <a onclick="return confirm('Bạn có chắc là muốn xóa loại vé này ko?')" href="{{ URL::to('/deleteTicket/'.$ticket->ticketID) }}" class="active styling-edit" ui-toggle-class="">
-                <i class="fa fa-times text-danger text"></i>
-              </a>
-            </td>
+
           </tr>
           
         @endforeach
