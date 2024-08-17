@@ -157,6 +157,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="{{URL::to('/add_ticketImg')}}">Thêm hình ảnh loại vé</a></li>
                     </ul>
                 </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Các sự kiện</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{URL::to('/event_manage')}}">Quản lý các sự kiện</a></li>
+                        <li><a href="{{URL::to('/add_event')}}">Thêm sự kiện </a></li>
+                        <li><a href="{{URL::to('/ticketImg_manage')}}">Quản lý hình ảnh sự kiện</a></li>
+                        <li><a href="{{URL::to('/add_ticketImg')}}">Thêm hình ảnh sự kiện</a></li>
+                    </ul>
+                </li>
                    
                 </li>
                  <li class="sub-menu">

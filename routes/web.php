@@ -5,6 +5,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GioiThieuController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\GiaVeController;
+use App\Http\Controllers\EventImgController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\LichSuHinhThanhController;
 use App\Http\Controllers\TicketImgController;
 use App\Http\Controllers\VeChiTietController;
@@ -120,5 +122,23 @@ Route::post('/saveTicketImg', [TicketImgController::class, 'saveTicketImg']);
 Route::get('/editTicketImg/{ticketImgID}', [TicketImgController::class, 'editTicketImg']);
 Route::post('/updateTicketImg/{ticketImgID}', [TicketImgController::class, 'updateTicketImg']);
 Route::get('/deleteTicketImg/{ticketImgID}', [TicketImgController::class, 'deleteTicketImg']);
+
+
+// -----------------------------------Event------------------------------
+Route::get('/event_manage', [EventController::class, 'event_manage']);
+Route::get('/add_event', [EventController::class, 'index']);
+Route::post('/saveEvent', [EventController::class, 'saveEvent']);
+Route::get('/editEvent/{eID}', [EventController::class, 'editEvent']);
+Route::post('/updateEvent/{eID}', [EventController::class, 'updateEvent']);
+Route::get('/deleteEvent/{eID}', [EventController::class, 'deleteEvent']);
+
+
+// -----------------------------------EventImg------------------------------
+Route::get('/eventImg_manage', [EventImgController::class, 'eventImg_manage']);
+Route::get('/add_eventImg', [EventImgController::class, 'index']);
+Route::post('/saveEventImg', [EventImgController::class, 'saveEvent']);
+Route::get('/editEventImg/{eImgID}', [EventImgController::class, 'editEventImg']);
+Route::post('/updateEventImg/{eImgID}', [EventImgController::class, 'updateEventImg']);
+Route::get('/deleteEventImg/{eImgID}', [EventImgController::class, 'deleteEventImg']);
 
 

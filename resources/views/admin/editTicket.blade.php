@@ -5,7 +5,7 @@
     <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    Cập nhật địa điểm vào cơ sở dữ liệu  
+                    Cập nhật vé vào cơ sở dữ liệu  
                 </header>
                  <?php
                     $message = Session::get('message');
@@ -21,11 +21,11 @@
                         <form role="form" action="{{URL::to('/updateTicket/'.$editTicket-> ticketID )}}" method="post">
                             {{ csrf_field() }}
                         <div class="form-group">
-                            <label for="ticketID">ID địa điểm(ticketID )</label>
+                            <label for="ticketID">ID vé(ticketID )</label>
                             <input type="text" value="{{ $editTicket->ticketID  }}" class="form-control" name="ticketID"  id="ticketID"  >
                         </div>
                         <div class="form-group">
-                            <label for="ticketName">Tên vé(ticketName	)</label>
+                            <label for="ticketName">Tên vé(ticketName)</label>
                             <input type="text" value="{{ $editTicket->ticketName  }}" class="form-control" name="ticketName"  id="ticketName" >
                         </div>
                         <div class="form-group">
