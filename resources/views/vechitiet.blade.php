@@ -20,7 +20,6 @@
 
         <div class="linebw2-VeChiTiet"></div>
         <p class="DescTicket-VeChiTiet">{{ $vechitiet -> ticketDescription }}</p>
-        {{-- <p class="DescTicket-VeChiTiet">Đầm Sen là điểm check-in được ưa chuộng của giới trẻ hiện nay.</p> --}}
     </div>
 
 {{-- -----------------------content --}}

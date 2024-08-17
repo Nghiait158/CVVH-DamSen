@@ -10,7 +10,7 @@ class VeChiTietController extends Controller
     {
         $vechitiet = Ticket::with('images')->find($ticketID);
         // $areaName = $locationDetail ? $locationDetail->category->area->areaName : 'N/A';
-        // dd($vetrongcongvien);
+        // dd($vechitiet);
         $data = [
             'vechitiet' => $vechitiet,
             'images' => $vechitiet ? $vechitiet->images : [],
