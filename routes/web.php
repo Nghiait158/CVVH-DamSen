@@ -8,6 +8,7 @@ use App\Http\Controllers\GiaVeController;
 use App\Http\Controllers\EventImgController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LichSuHinhThanhController;
+use App\Http\Controllers\SuKienController;
 use App\Http\Controllers\TicketImgController;
 use App\Http\Controllers\VeChiTietController;
 use App\Http\Controllers\ChinhSachBaoMatController;
@@ -56,6 +57,16 @@ Route::get('/chinhsachbaomat', [ChinhSachBaoMatController::class, 'index']);
 
 // ------------------------Vé Chi tiet --------------------------
 Route::get('/vechitiet/{ticketID}', [VeChiTietController::class, 'index']);
+
+
+// ------------------------------------- Sự Kiện------------------------
+Route::get('/sukien', [SuKienController::class, 'index']);
+
+
+
+
+
+
 
 
 

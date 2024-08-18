@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{('/frontEnd/css/khampha.css')}}" />
     <link rel="stylesheet" href="{{('/frontEnd/css/khamphachitiet.css')}}" />
     <link rel="stylesheet" href="{{('/frontEnd/css/vechitiet.css')}}" />
+    <link rel="stylesheet" href="{{('/frontEnd/css/sukien.css')}}" />
 
     {{-- ---------------------------JS--------------------------------- --}}
     <script src="{{ asset('frontEnd/js/header.js') }}" defer></script>
@@ -71,7 +72,7 @@
                       </ul>
                   </li>
                   <li class="sub-menu">
-                    <a href="javascript:;">Sự Kiện </a>
+                    <a href="{{URL::to('/sukien')}}">Sự Kiện </a>
                 </li>
                 <div class="image-containerHeader">
                   <img class="damSenPark" loading="lazy" alt="" src="{{ ('/frontEnd/img/damSenPark.png') }}">
