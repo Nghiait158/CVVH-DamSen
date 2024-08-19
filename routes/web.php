@@ -62,6 +62,8 @@ Route::get('/vechitiet/{ticketID}', [VeChiTietController::class, 'index']);
 // ------------------------------------- Sự Kiện------------------------
 Route::get('/sukien', [SuKienController::class, 'index']);
 
+// ------------------------Vé Chi tiet --------------------------
+Route::get('/sukien/{eID}', [SuKienController::class, 'sukienchitiet']);
 
 
 

@@ -15,7 +15,10 @@
             
         </div>
         <div class="KhamPhaNgay">
-            <p class="KhamPhaNgay-text">KHÁM PHÁ NGAY</p>
+            <a style="text-decoration: none" href="{{URL::to('/khampha')}}">
+                <p class="KhamPhaNgay-text">KHÁM PHÁ NGAY</p>
+            </a>
+            
         </div>
     </div>
 

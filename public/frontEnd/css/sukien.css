@@ -131,7 +131,9 @@ body{
     width: 550px;
 
 }
-
+.boxEvent a{
+    text-decoration: none;
+}
 .item .boxXemThem{
     position: absolute; /* Đặt vị trí tuyệt đối để nó phủ lên hình ảnh */
     z-index: 1; /* Đảm bảo nó xuất hiện phía trước hình ảnh */
@@ -156,7 +158,6 @@ body{
 
 .listEvent{
     position: relative;
-    background-color: #8B5CF6;
     width: 1664px;
     height: auto;
     left: 72px;
@@ -168,7 +169,6 @@ body{
     margin-bottom: 24px;
 }
 .boxEvent{
-    background-color: #dbd5ba;
     width: 398px;
     height: 462px;
     box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.16);
@@ -183,6 +183,7 @@ body{
     margin-left: 16px;
     color: var(--heading-text-color, #259E58);
     width: 305px;
+    height: 60px;
     /* Nunito/20px/20px: Bold */
     font-family: Nunito;
     font-size: 20px;
@@ -196,7 +197,7 @@ body{
 
 .descEvent{
     overflow: hidden;
-    margin-left: 16px;
+    margin-left: 16px;  
     color: var(--gray-gray-500, #666);
     text-overflow: ellipsis;
     /* white-space: nowrap; */
@@ -212,21 +213,45 @@ body{
     margin-bottom: 3px;
 }
 .box-info{
+    position: absolute;
     margin-left: 16px;
     width: 120px;
     height: 55px;
     margin-bottom: 12px;
 }
 .boxSuKien-SuKien{
+    
     display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con theo hàng */
     align-items: center; /* Căn giữa các phần tử dọc theo trục cross (trục vuông góc với trục chính) */
     gap: 8px; /* Khoảng cách giữa SVG và văn bản */
 }
 .boxSuKien-SuKien-name{
+
     color: var(--Pink, #EC008C);
     font-family: Nunito;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 24px */
+}
+.boxXemThem2{
+    position: relative;
+    z-index: 1; /* Đảm bảo nó xuất hiện phía trước hình ảnh */
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center; /* Căn giữa văn bản */
+    display: flex;
+    padding: 10px 12px 10px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--green-green-500, #259E58);
+    width: 130px;
+    left: 220px;
+    cursor: pointer;
 }

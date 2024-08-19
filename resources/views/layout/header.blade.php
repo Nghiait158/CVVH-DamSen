@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{('/frontEnd/css/khamphachitiet.css')}}" />
     <link rel="stylesheet" href="{{('/frontEnd/css/vechitiet.css')}}" />
     <link rel="stylesheet" href="{{('/frontEnd/css/sukien.css')}}" />
+    <link rel="stylesheet" href="{{('/frontEnd/css/sukienchitiet.css')}}" />
 
     {{-- ---------------------------JS--------------------------------- --}}
     <script src="{{ asset('frontEnd/js/header.js') }}" defer></script>
