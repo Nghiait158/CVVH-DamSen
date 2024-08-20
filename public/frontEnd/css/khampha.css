@@ -18,7 +18,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 34.5px */
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .locationPoint {
     position: absolute;
@@ -33,7 +33,8 @@
     border: 2px solid var(--pink-pink-500, #EC008C);
     background: var(--White, #FFF);
     z-index: 1; 
-    /* cursor: pointer; */
+    cursor: pointer;
+    user-select: none;
 }
 /* .hidden {
     visibility: hidden;

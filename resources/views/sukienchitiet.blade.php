@@ -32,7 +32,7 @@
     </div>
 
 {{-- -----------------------content --}}
-    <div class="content-SuKienChiTiet" >
+    <div class="contentBody-SuKienChiTiet" >
       <?php echo $sukienchitiet->eContent ?>
       <style>
       {{ $sukienchitiet->eContentCSS }}

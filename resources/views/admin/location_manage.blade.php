@@ -30,30 +30,19 @@
       <table class="table table-striped b-t b-light">
         <thead>
           <tr>
+            <th style="width:30px;"></th>
             <th>loID</th>
             <th>loName</th>
             <th>loDescription</th>
             <th>loContent	</th>
             <th>loDate</th>
             <th>categoryID</th>
-            <th style="width:30px;"></th>
+            
           </tr>
         </thead>
         <tbody>
         @foreach ($allLocation ?? [] as $location)
           <tr>
-            <td><span class="text-ellipsis">{{ $location->loID }} </span></td>
-            <td><span class="text-ellipsis">{{ $location->loName }}</span></td>
-            <td><span class="text-ellipsis">{{ $location->loDescription }}</span></td>
-            <td><span class="text-ellipsis"><?php echo $location->loContent ?>
-            <style>
-               {{ $location->loContentCss }}
-            </style>
-            </span></td>
-            
-            {{-- <td><span class="text-ellipsis">{{ $location->loContent }}</span></td> --}}
-            <td><span class="text-ellipsis">{{ $location->loDate }}</span></td>
-            <td><span class="text-ellipsis">{{ $location->categoryID }}</span></td>
             <td>
               <a href="{{ URL::to('/editLocation/'.$location->loID) }}" class="active styling-edit" ui-toggle-class="">
                 <i class="fa fa-pencil-square-o text-success text-active"></i></a>
@@ -61,6 +50,22 @@
                 <i class="fa fa-times text-danger text"></i>
               </a>
             </td>
+            <td><span class="text-ellipsis">{{ $location->loID }} </span></td>
+            <td><span class="text-ellipsis">{{ $location->loName }}</span></td>
+            <td><span class="text-ellipsis">{{ $location->loDescription }}</span></td>
+            <td><span class="text-ellipsis"><?php echo $location->loContent ?>
+            <style>
+               {{ $location->loContentCss }}
+            </style>
+            <script>
+              {{ $location->loContentJS }}
+            </script>
+            </span></td>
+            
+            {{-- <td><span class="text-ellipsis">{{ $location->loContent }}</span></td> --}}
+            <td><span class="text-ellipsis">{{ $location->loDate }}</span></td>
+            <td><span class="text-ellipsis">{{ $location->categoryID }}</span></td>
+            
           </tr>
           
         @endforeach

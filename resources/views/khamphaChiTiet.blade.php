@@ -41,6 +41,9 @@
             line-height: normal;
         }
         </style>
+        <script>
+             {!! $locationDetail->loContentJS !!}
+        </script>
     </div>
 
     <div class="footer-khamphachitiet">

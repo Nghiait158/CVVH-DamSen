@@ -106,14 +106,9 @@
 }
 .contentLocation-khamphachitiet{
     position: relative;
-    /* background-color: aqua; */
-    left: 72px;
-    top: 250px;
-    right: 72px;
-    bottom: 72px;
-    width: 1664px;
-    height: 1664px;
-    flex-wrap: wrap;
+    margin: 72px 166px 0 166px;
+    width: 1480px;
+    height: auto;
 }
 .footer-khamphachitiet{
     position: relative;

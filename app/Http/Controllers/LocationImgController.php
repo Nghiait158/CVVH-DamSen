@@ -34,11 +34,19 @@ class LocationImgController extends Controller
         $img->loImgName = $data['loImgName'];
         $img->loID = $data['loID'];
         
-        if ($request->hasFile('loImgPath')) {
+        // if ($request->hasFile('loImgPath')) {
+        //     $get_image = $request->file('loImgPath');
+        //     $new_image = $data['loImgName'] . '.' . $get_image->getClientOriginalExtension();
+        //     $get_image->move(public_path('frontEnd/img'), $new_image);
+        //     $img->loImgPath = '/frontEnd/img/' . $new_image;
+        // }
+        if ($request->imageChoice == 'file' && $request->hasFile('loImgPath')) {
             $get_image = $request->file('loImgPath');
             $new_image = $data['loImgName'] . '.' . $get_image->getClientOriginalExtension();
             $get_image->move(public_path('frontEnd/img'), $new_image);
             $img->loImgPath = '/frontEnd/img/' . $new_image;
+        } elseif ($request->imageChoice == 'text' && !empty($data['locationImgUrl'])) {
+            $img->loImgPath = $data['locationImgUrl'];
         }
        
         $img->save();
@@ -63,16 +71,27 @@ class LocationImgController extends Controller
         $img->loImgName = $data['loImgName'];
         $img->loID = $data['loID'];
         
-        if ($request->hasFile('loImgPath')) {
+        // if ($request->hasFile('loImgPath')) {
+        //     if (file_exists(public_path($img->loImgPath))) {
+        //         unlink(public_path($img->loImgPath));
+        //     }
+    
+        //     // Process the new image
+        //     $image = $request->file('loImgPath');
+        //     $imageName = $data['loImgName'] . '.' . $image->getClientOriginalExtension();
+        //     $image->move(public_path('frontEnd/img'), $imageName);
+        //     $img->loImgPath = '/frontEnd/img/' . $imageName;
+        // }
+        if ($data['imageChoice'] === 'file' && $request->hasFile('loImgPath')) {
             if (file_exists(public_path($img->loImgPath))) {
                 unlink(public_path($img->loImgPath));
             }
-    
-            // Process the new image
             $image = $request->file('loImgPath');
             $imageName = $data['loImgName'] . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('frontEnd/img'), $imageName);
             $img->loImgPath = '/frontEnd/img/' . $imageName;
+        } elseif ($data['imageChoice'] === 'text' && !empty($data['locationImgUrl'])) {
+            $img->loImgPath = $data['locationImgUrl'];
         }
         $img->save();
         Session::put('message','Chỉnh sửa hình ảnh thành công');
