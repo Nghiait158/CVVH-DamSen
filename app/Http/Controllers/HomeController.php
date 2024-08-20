@@ -14,13 +14,22 @@ class HomeController extends Controller
         return view('homePage', $data);
     }
         function data() {
-        $all_area = Area::all();
-        // dd($allRec);      
-        // dd($all_area);
-        return [
-            'all_area' => $all_area,
-        ];
-    }
+            $all_area = Area::all();
+            $categories = Category::with('locations')->get();
+
+            // Sắp xếp các location theo categoryID và lấy luôn tên category
+            $categorizedLocations = [];
+            foreach ($categories as $category) {
+                $categorizedLocations[$category->categoryID] = [
+                    'categoryName' => $category->categoryName,
+                    'locations' => $category->locations
+                ];
+            }
+            return [
+                'all_area' => $all_area,
+                'categorizedLocations' => $categorizedLocations,
+            ];
+        }
 
 
     public  function tiny(){
@@ -37,8 +46,11 @@ class HomeController extends Controller
     
 
     public function test(){
-
         return view('test');
     }
+
+
+
+
     
 }

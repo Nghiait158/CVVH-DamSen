@@ -114,62 +114,59 @@
         <div class="list-location-TroChoi">
           <div class="column col-1">
             
-            <p class="categoryName">CẢM GIÁC MẠNH</p>
+            <p class="categoryName">{{ $categorizedLocations[1]['categoryName'] }}</p>
             {{-- --@foreach ---- --}}
-            <div class="item-location">
-              <div class="circle-location">01</div>
-              <span class="item-location-text">Cá Chép Nhào Lộn</span>
-            </div>
-            <div class="item-location">
-              <div class="circle-location">02</div>
-              <span class="item-location-text">Lâu Đài Kinh Dị</span>
-            </div>
-            <div class="item-location">
-              <div class="circle-location">03</div>
-              <span class="item-location-text">Phượng Hoàng Bay</span>
-            </div>  
+            @foreach($categorizedLocations[1]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+              @endforeach
+            </a>
           {{-- ------------ --}}
           </div>
 
           <div class="column col-2">
-            <p class="categoryName">TƯƠNG TÁC ẢO</p>
-            <div class="item-location">
-              <div class="circle-location">14</div>
-              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[2]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[2]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+              @endforeach
+            </a>
+            
           </div>
 
           <div class="column col-3">
-            <p class="categoryName">GIẢI TRÍ</p>
-            <div class="item-location">
-              <div class="circle-location">19</div>
-              <span class="item-location-text">Băng Đăng</span>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[4]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[4]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+              @endforeach
+            </a>
           </div>
 
           <div class="column col-4">
-            <p class="categoryName">THIẾU NHI</p>
-            <div class="item-location">
-              <div class="circle-location">23</div>
-              <div class="item-location-text">Ếch nhảy</div>
-            </div>
-            <div class="item-location">
-              <div class="circle-location">24</div>
-              <div class="item-location-text">Điệu Nhảy Thiên Thần</div>
-            </div>
-            <div class="item-location">
-              <div class="circle-location">25</div>
-              <div class="item-location-text">Khinh Khí Cầu Bay</div>
-            </div>
-            <div class="item-location">
-              <div class="circle-location">26</div>
-              <div class="item-location-text">Hải Cẩu Vượt Thác</div>
-            </div>
-            <div class="item-location">
-              <div class="circle-location">23</div>
-              <div class="item-location-text">Ếch nhảy</div>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[5]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[5]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+              @endforeach
+            </a>
           </div>
+
         </div>
 
 
@@ -178,36 +175,40 @@
         {{-- ---------------------------------------- -------------}}
         <div class="list-location-VuonThu">
           <div class="column col-1">
-            
-            <p class="categoryName"></p>
-            <div class="item-location">
-              <div class="circle-location">35</div>
-              <span class="item-location-text">Khỉ Đuôi Dài</span>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[6]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[6]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+            </a>
+            @endforeach
           </div>
 
           <div class="column col-2">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p>
             <div class="item-location">
-              <div class="circle-location">36</div>
-              <span class="item-location-text">Gấu Ngựa</span>  
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>  
+            </div> --}}
           </div>
 
           <div class="column col-3">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p> 
             <div class="item-location">
-              <div class="circle-location">37</div>
-              <span class="item-location-text">Đười Ươi Sumatra</span>
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
 
           <div class="column col-4">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p> 
             <div class="item-location">
-              <div class="circle-location">23</div>
-              <div class="item-location-text">Ếch nhảy</div>
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
         </div>
 
@@ -215,36 +216,40 @@
         {{-- ---------------------------------------- -------------}}
         <div class="list-location-CanhDep">
           <div class="column col-1">
-            
-            <p class="categoryName"></p>
-            <div class="item-location">
-              <div class="circle-location">46</div>
-              <span class="item-location-text">Nam Tú Thượng Uyển</span>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[7]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[7]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+            </a>
+            @endforeach
           </div>
 
           <div class="column col-2">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p>
             <div class="item-location">
-              <div class="circle-location">14</div>
-              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
 
           <div class="column col-3">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p> 
             <div class="item-location">
-              <div class="circle-location">19</div>
-              <span class="item-location-text">Băng Đăng</span>
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
 
           <div class="column col-4">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p> 
             <div class="item-location">
-              <div class="circle-location">23</div>
-              <div class="item-location-text">Ếch nhảy</div>
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
         </div>
 
@@ -255,36 +260,40 @@
         {{-- ---------------------------------------- -------------}}
         <div class="list-location-SanKhau">
           <div class="column col-1">
-            
-            <p class="categoryName"></p>
-            <div class="item-location">
-              <div class="circle-location">01</div>
-              <span class="item-location-text">Cá Chép Nhào Lộn</span>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[8]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[8]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+            </a>
+            @endforeach
           </div>
 
           <div class="column col-2">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p> 
             <div class="item-location">
-              <div class="circle-location">14</div>
-              <span class="item-location-text">Xem Phim Cinemax 8D</span>  
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
 
           <div class="column col-3">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p> 
             <div class="item-location">
-              <div class="circle-location">19</div>
-              <span class="item-location-text">Băng Đăng</span>
-            </div>
+              <div class="circle-location"></div>
+              <span class="item-location-text"></span>
+            </div> --}}
           </div>
 
           <div class="column col-4">
-            <p class="categoryName"></p>
+            {{-- <p class="categoryName"></p>
             <div class="item-location">
               <div class="circle-location">23</div>
               <div class="item-location-text">San khau</div>
-            </div>
+            </div> --}}
           </div>
         </div>
 
@@ -294,36 +303,40 @@
         {{-- ---------------------------------------- -------------}}
         <div class="list-location-GiaoDuc">
           <div class="column col-1">
-            
-            <p class="categoryName"> </p>
-            <div class="item-location">
-              <div class="circle-location">01</div>
-              <span class="item-location-text">Cá Chép Nhào Lộn</span>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[9]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[9]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+            </a>
+            @endforeach
           </div>
 
           <div class="column col-2">
-            <p class="categoryName"> </p>
+            {{-- <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">14</div>
               <span class="item-location-text">Xem Phim Cinemax 8D</span>  
-            </div>
+            </div> --}}
           </div>
 
           <div class="column col-3">
-            <p class="categoryName"> </p>
+            {{-- <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">19</div>
               <span class="item-location-text">Băng Đăng</span>
-            </div>
+            </div> --}}
           </div>
 
           <div class="column col-4">
-            <p class="categoryName"> </p>
+            {{-- <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">23</div>
               <div class="item-location-text">Ếch nhảy</div>
-            </div>
+            </div> --}}
           </div>
         </div>
 
@@ -333,36 +346,40 @@
         {{-- ---------------------------------------- -------------}}
         <div class="list-location-AmThuc">
           <div class="column col-1">
-            
-            <p class="categoryName"> </p>
-            <div class="item-location">
-              <div class="circle-location">01</div>
-              <span class="item-location-text">Cá Chép Nhào Lộn</span>
-            </div>
+            <p class="categoryName">{{ $categorizedLocations[10]['categoryName'] }}</p>
+            {{-- --@foreach ---- --}}
+            @foreach($categorizedLocations[10]['locations'] as $location)
+            <a style="text-decoration: none" href="{{ URL::to('/khamphaChiTiet/' . ($location->loID)) }}">
+              <div class="item-location">
+                <div class="circle-location">{{ $location->loID }}</div>
+                <span class="item-location-text">{{ $location->loName }}</span>
+              </div>
+            </a>
+            @endforeach
           </div>
 
           <div class="column col-2">
-            <p class="categoryName"> </p>
+            {{-- <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">14</div>
               <span class="item-location-text">Xem Phim Cinemax 8D</span>  
-            </div>
+            </div> --}}
           </div>
 
           <div class="column col-3">
-            <p class="categoryName"> </p>
+            {{-- <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">19</div>
               <span class="item-location-text">Băng Đăng</span>
-            </div>
+            </div> --}}
           </div>
 
           <div class="column col-4">
-            <p class="categoryName"> </p>
+            {{-- <p class="categoryName"> </p>
             <div class="item-location">
               <div class="circle-location">23</div>
               <div class="item-location-text">Ca chien</div>
-            </div>
+            </div> --}}
           </div>
         </div>
 

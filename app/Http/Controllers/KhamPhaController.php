@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Location;
+use App\Models\Area;
+use App\Models\Category;
+
 use Illuminate\Http\Request;
 
 class KhamPhaController extends Controller
@@ -23,9 +26,22 @@ class KhamPhaController extends Controller
                 'areaName' => $areaName
             ];
         }
-        // dd($location1);
+        // -------header--------
+        $all_area = Area::all();
+            $categories = Category::with('locations')->get();
+
+            // Sắp xếp các location theo categoryID và lấy luôn tên category
+            $categorizedLocations = [];
+            foreach ($categories as $category) {
+                $categorizedLocations[$category->categoryID] = [
+                    'categoryName' => $category->categoryName,
+                    'locations' => $category->locations
+                ];
+            }
         return [
             'locations' => $locations,
+            'all_area' => $all_area,
+                'categorizedLocations' => $categorizedLocations,
         ];
     }
 
@@ -47,13 +63,30 @@ class KhamPhaController extends Controller
         ->flatMap(function ($group) {
             return $group->take(1); // Lấy một địa điểm từ mỗi nhóm
         }); 
+        
+
+        // -------------------header--------
+        $all_area = Area::all();
+            $categories = Category::with('locations')->get();
+
+            // Sắp xếp các location theo categoryID và lấy luôn tên category
+            $categorizedLocations = [];
+            foreach ($categories as $category) {
+                $categorizedLocations[$category->categoryID] = [
+                    'categoryName' => $category->categoryName,
+                    'locations' => $category->locations
+                ];
+            }
         $data = [
             'areaName'=>$areaName,
             'locationDetail' => $locationDetail,
             'images' => $locationDetail ? $locationDetail->images : [],
             'previousLocation' => $previousLocation,
             'nextLocation' => $nextLocation,
-            'randomLocations' => $randomLocations
+            'randomLocations' => $randomLocations,
+            // -----header------
+            'all_area' => $all_area,
+            'categorizedLocations' => $categorizedLocations,
         ];
         // dd($images);
         return view('khamphaChiTiet', $data);
