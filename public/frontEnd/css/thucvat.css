@@ -4,3 +4,71 @@
     width: 1480px;
     height: auto;
 }
+.box_Intro{
+    position: relative;
+    width: 1471px;
+    height: 666px;
+    background-color: aqua;
+}
+.box_Intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ không gian của div */
+}
+.box_Intro h1 {
+    position: absolute;
+    top: 50%; /* Căn chỉnh khoảng cách từ trên xuống */
+    left: 30px; /* Căn chỉnh khoảng cách từ trái sang */
+    color: #FFF;
+    font-family: Nunito;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    z-index: 1;
+    text-align: left; /* Căn chỉnh chữ về bên trái */
+}
+.box_Intro p {
+    position: absolute;
+    top: 65%; /* Điều chỉnh vị trí để nó nằm dưới .line */
+    left: 30px; /* Căn chỉnh khoảng cách từ trái sang để đồng nhất với h1 và .line */
+    color: #FFF;
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    z-index: 1;
+    text-align: left;
+    max-width: 600px; /* Đặt giới hạn chiều rộng cho đoạn văn */
+}
+.lineThucVat{
+    position: absolute;
+    top: 65%; /* Điều chỉnh vị trí để nó nằm dưới h1 */
+    left: 30px; /* Căn chỉnh khoảng cách từ trái sang để đồng nhất với h1 */
+    width: 89px;
+    height: 2px;
+    background: #FFF;
+    z-index: 1;
+}
+.boxXemThemThucVat{
+    position: absolute;
+    z-index: 2; /* Đảm bảo nó xuất hiện phía trước hình ảnh */
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    padding: 10px 12px 10px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--green-green-500, #259E58);
+    width: 130px;
+    left: 30px; /* Đảm bảo căn chỉnh đồng nhất với các thành phần khác */
+    top: 85%; /* Điều chỉnh vị trí để nó nằm bên dưới đoạn văn */
+    cursor: pointer;
+}

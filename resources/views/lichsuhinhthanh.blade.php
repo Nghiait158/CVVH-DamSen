@@ -2004,6 +2004,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   box-sizing: border-box;
+  justify-content: center;
 }
 .sub-content-parent {
   align-self: stretch;
@@ -2011,6 +2012,7 @@
   padding: 0 var(--padding-53xl);
   max-width: 100%;
   color: var(--white);
+  
 }
 .root {
   width: 100%;

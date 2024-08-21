@@ -74,7 +74,9 @@
         @endforeach
     </div>
 
-    <div class="footer-khamphachitiet">
+    <div class="footer-khamphachitiet" style="
+    width: 83%;
+    margin: auto;">
         <div class="nextKhamPhaChitiet">
             <a href="{{ URL::to('/khamphaChiTiet/' . ($locationDetail->loID - 1)) }}" class="muitenTrai">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">

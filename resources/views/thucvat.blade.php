@@ -19,6 +19,57 @@
     </div>
 
     <div class="content-ThucVat" >
+        
+        <div class=box_Intro>
+            <img src="https://s3-alpha-sig.figma.com/img/15f3/48d4/84d24bf95e0d1af9fbed525565083648?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ermFHR5UXuPjjMdqoeiiUliUhqUNS3Y7f5Cw0Cvo4gWyVFHDoRTP8cgbEnxB09DgNfqQmo7uMnYVZoxqijuU1F7DpimCScqdKuv~LZiGotn9OLDrHgnRaWghx~rt89BK4aOeAO6SlnysC7xvsDEUX3VxQvM8mkFem1xCsEvhmLpoZmU5TjC-EmWkEZRDGlYhmJmKYYW2y9KWgv80FIySB~hwEaj3m7KpOgpMfojYxmaNX-z3GgB~QwnLYLK89-BRpALZFQGeKwWlptDqmkPg3RT-guKonnuvKkMW3op3~00recADlnogY8LS8J~ByvpUrwDTUgIptYjg-FVK6HX-6g__" alt="">
+            <h1>Hoa Sen</h1>
+            <div class=lineThucVat"></div>
+            <p>Hoa sen từ lâu đã được biết tới là loài hoa thanh khiết có ý nghĩa truyền thống lâu đời ở phương Đông. Sen mọc và lớn lên giữa bùn lầy nhưng không hề vì bùn mà bị ô nhiễm, vấy bẩn.</p>
+
+
+            <a href="{{URL::to('/khamphaChiTiet/59/1') }}" style="text-decoration:none">
+                <div class="boxXemThemThucVat">Xem Thêm <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path d="M20.625 15L15.625 10M20.625 15L15.625 20M20.625 15L6.5625 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></div>
+            </a>
+
+        </div>
+        <div class="space">
+
+        </div>
+        <div style="position: relative; will-change: top, left; left: -170px;">
+            <div class="listEvent">
+                @foreach($first8ThucVat ?? [] as $tv)
+                
+                <div class="boxEvent">
+                    {{-- @if($tv->tvImgPath->isNotEmpty()) --}}
+                                <img src="{{ $tv->tvImgPath }}" alt="{{ $tv->tvName }}" />
+                    {{-- @else
+                        <img src="https://s3-alpha-sig.figma.com/img/10f7/48be/f448c491645e7668401ee80874842561?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KXTRK30gDe2fkm0BV-7iuvJGzCoI4l2QOp1zXRbwhfMVAnEmfeyCKAHw05GmIA2DqhbwgMzyroMU5zxh2n351apuvvuaPx985LzKq4wI8qCdnX03M9qOJBnN56DedCoyUBSHtp3qk4pOtSnAix5dByYicL1pcQIOrhS92e0wSLmgHUKKbuJBp~~4GDWqk4V3FxRwVIba0-nO2bRjh5n6zKNLZfWKNipxC2sNs46eOdKhi~xJevMgxnQ2c9oya57sHr9~nDuyEZIyuqd3ywmCc4PMpd-SPAJoASkUHwY8d0rELbLJAQ05OZ9o27UTQLaedt4vQxDcpd~C5y5M8Y4k3g__" alt="{{ $tv->tvName }}" />
+                    @endif --}}
+                    <p class="nameEvent">{{ $tv->tvName }}</p>
+                    <p class="descEvent">{{ $tv->tvDescription }}</p>
+        
+                    <div class="box-info">
+                        <div class="boxSuKien-SuKien">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M16.5254 7.24919L12.7504 3.47419C11.9587 2.68252 10.8671 2.25752 9.75039 2.31585L5.58372 2.51585C3.91705 2.59085 2.59205 3.91585 2.50872 5.57419L2.30872 9.74085C2.25872 10.8575 2.67539 11.9492 3.46705 12.7409L7.24205 16.5159C8.79205 18.0659 11.3087 18.0659 12.8671 16.5159L16.5254 12.8575C18.0837 11.3159 18.0837 8.79919 16.5254 7.24919ZM7.91705 10.3159C6.60039 10.3159 5.51705 9.24085 5.51705 7.91585C5.51705 6.59085 6.60039 5.51585 7.91705 5.51585C9.23372 5.51585 10.3171 6.59085 10.3171 7.91585C10.3171 9.24085 9.23372 10.3159 7.91705 10.3159ZM14.6087 11.2742L11.2754 14.6075C11.1504 14.7325 10.9921 14.7909 10.8337 14.7909C10.6754 14.7909 10.5171 14.7325 10.3921 14.6075C10.1504 14.3659 10.1504 13.9659 10.3921 13.7242L13.7254 10.3909C13.9671 10.1492 14.3671 10.1492 14.6087 10.3909C14.8504 10.6325 14.8504 11.0325 14.6087 11.2742Z" fill="#EC008C"/>
+                            </svg>
+                            <p class="boxSuKien-SuKien-name">{{ $tv->tvStatus }}</p>
+        
+                        </div>
+                    </div>
+                    <a href="{{URL::to('/khamphaChiTiet/59/' .$tv->tvID) }}">
+                        <div class="boxXemThem2">Xem Thêm <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                            <path d="M20.625 15L15.625 10M20.625 15L15.625 20M20.625 15L6.5625 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></div>
+                    </a>
+                   
+                </div>
+        
+                @endforeach
+            </div>
+        </div>
        
     </div>
 

@@ -7,7 +7,7 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\GiaVeController;
 use App\Http\Controllers\EventImgController;
 use App\Http\Controllers\ThanhVienController;
-
+use App\Http\Controllers\ThucVatController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LichSuHinhThanhController;
 use App\Http\Controllers\SuKienController;
@@ -44,9 +44,14 @@ Route::get('/test', [HomeController::class, 'test']);
 // -----------------Kham Pha------------------------------------------------
 Route::get('/khampha', [KhamPhaController::class, 'index']);
 
-// ---------------Khám Phá Thưc Vật 
-Route::get('/khamphaChiTiet/59', [KhamPhaController::class, 'thucvat']);
 
+
+
+// ---------------Khám Phá Thưc Vật -------------------------------------
+Route::get('/khamphaChiTiet/59', [ThucVatController::class, 'thucvat']);
+
+// ---------------Khám Phá Thưc Vật -------------------------------------
+Route::get('/khamphaChiTiet/59/{tvID}', [ThucVatController::class, 'thucvat']);
 
 
 // ----------------Khám phá chi tiết--------------------------------------
@@ -120,6 +125,14 @@ Route::post('/saveLocationImg', [LocationImgController::class, 'saveLocationImg'
 Route::get('/editLocationImg/{loImgID}', [LocationImgController::class, 'editLocationImg']);
 Route::post('/updateLocationImg/{loImgID}', [LocationImgController::class, 'updateLocationImg']);
 Route::get('/deleteLocationImg/{loImgID}', [LocationImgController::class, 'deleteLocationImg']);
+
+// ------------------------------ThucVat-------------------------------------
+Route::get('/thucvat_manage', [ThucVatController::class, 'thucvat_manage']);
+Route::get('/add_thucvat', [ThucVatController::class, 'index']);
+Route::post('/saveThucVat', [ThucVatController::class, 'saveThucVat']);
+Route::get('/editThucVat/{tvID}', [ThucVatController::class, 'editThucVat']);
+Route::post('/updateThucVat/{tvID}', [ThucVatController::class, 'updateThucVat']);
+Route::get('/deleteThucVat/{tvID}', [ThucVatController::class, 'deleteThucVat']);
 
 
 // --------------------------imgMainPage----------------------------------------
