@@ -6,6 +6,8 @@ use App\Http\Controllers\GioiThieuController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\GiaVeController;
 use App\Http\Controllers\EventImgController;
+use App\Http\Controllers\ThanhVienController;
+
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\LichSuHinhThanhController;
 use App\Http\Controllers\SuKienController;
@@ -42,8 +44,15 @@ Route::get('/test', [HomeController::class, 'test']);
 // -----------------Kham Pha------------------------------------------------
 Route::get('/khampha', [KhamPhaController::class, 'index']);
 
+// ---------------Khám Phá Thưc Vật 
+Route::get('/khamphaChiTiet/59', [KhamPhaController::class, 'thucvat']);
+
+
+
 // ----------------Khám phá chi tiết--------------------------------------
 Route::get('/khamphaChiTiet/{loID}', [KhamPhaController::class, 'khamphachitiet']);
+
+
 
 // ----------------------Giới thiệu------------------------------------
 Route::get('/gioithieu', [GioiThieuController::class, 'index']);
@@ -53,6 +62,9 @@ Route::get('/lichsuhinhthanh', [LichSuHinhThanhController::class, 'index']);
 
 // --------------------------Chính sách bảo mật  ------------------------
 Route::get('/chinhsachbaomat', [ChinhSachBaoMatController::class, 'index']);
+
+// --------------------------Thành Viên   ------------------------
+Route::get('/thanhvien', [ThanhVienController::class, 'index']);
 
 
 // ------------------------Vé Chi tiet --------------------------

@@ -1,0 +1,156 @@
+.contentThanhVien{
+    background-color: white;
+    margin: 24px 24px 24px 24px;
+    width: 1808px;
+    height: auto;
+    position: absolute;
+}
+.imgHead-ThanhVien {
+    position: relative;
+    margin: 72px 166px 0 166px;
+    width: 1471px;
+    height: 666px;
+    overflow: hidden; /* Đảm bảo hình ảnh không vượt ra ngoài */
+}
+
+.imgHead-ThanhVien img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ div mà không bị méo */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.p1-ThanhVien{
+    color: var(--pink-pink-500, #EC008C);
+    /* Bangers/50px */
+    font-family: Bangers;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+    
+}
+
+.content1{
+    margin-top: 10px;
+    color: var(--gray-gray-500, #666);
+    width: 973px;
+    /* Nunito/18px/18px: Regular */
+    font-family: Nunito;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+}
+.xemthem-ThanhVien{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--green-green-500, #259E58);
+    width: 168px;
+    height: 10x;
+}
+.xemthem-ThanhVien p{
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.boxXemThem-ThanhVien{
+    width: 130px ;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center; /* Căn giữa văn bản */
+    display: flex;
+    padding: 10px 12px 10px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--green-green-500, #259E58);
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+        .containerSlide{
+            display: flex;
+            width: 1471px;
+            height: 865px;
+            padding: 48px 60px 47px 60px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 68px;
+        }
+        .main{
+            height: 80%;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .list-image{
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .list-image div{
+            flex:1;
+            padding: 5px;
+        }
+        .list-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .imgfeature{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .control{
+            position: absolute;
+            top: 50%;
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+            transform: translateY(-50%);
+            cursor: pointer;
+            user-select: none;
+        }
+        .prev{
+            left:10px;
+        }
+        .next{
+            right:10px;
+        }
+        .active1{
+            border: 4px solid var(--pink-pink-500, #EC008C);
+        }
+
+        .underimg1{
+            color: var(--gray-gray-500, #666);
+            text-align: center;
+
+            /* Nunito/16px/16px: Medium */
+            font-family: Nunito;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 24px */
+        }
+
+
+        

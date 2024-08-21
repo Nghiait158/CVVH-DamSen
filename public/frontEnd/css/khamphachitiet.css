@@ -113,13 +113,12 @@
 .footer-khamphachitiet{
     position: relative;
     /* background-color: #259E58; */
-    left: 72px; 
-    right: 72px;
+    /* right: 72px; */
     bottom: 90px;
     transition: none; 
     top: 20px;
     height: 460px; 
-    width: 1666.03px;
+    width: 1800.03px;
 }
 
 .nextKhamPhaChitiet {

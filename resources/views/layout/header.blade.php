@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{('/frontEnd/css/vechitiet.css')}}" />
     <link rel="stylesheet" href="{{('/frontEnd/css/sukien.css')}}" />
     <link rel="stylesheet" href="{{('/frontEnd/css/sukienchitiet.css')}}" />
+    <link rel="stylesheet" href="{{('/frontEnd/css/thanhvien.css')}}" />
+    <link rel="stylesheet" href="{{('/frontEnd/css/thucvat.css')}}" />
 
     {{-- ---------------------------JS--------------------------------- --}}
     <script src="{{ asset('frontEnd/js/header.js') }}" defer></script>
@@ -57,7 +59,7 @@
                       <a href="{{URL::to('/gioithieu')}}">Giới thiệu </a>
                       <ul class="sub" style="left: 185px; top: -33px;">
                         <li><a href="{{URL::to('/lichsuhinhthanh')}}">Lịch sử hình thành</a></li>
-                        <li><a href="{{URL::to('/')}}">Thành viên</a></li>
+                        <li><a href="{{URL::to('/thanhvien')}}">Thành viên</a></li>
                         <li><a href="{{URL::to('/chinhsachbaomat')}}">Chính sách bảo mật</a></li>    
                       </ul>
                   </li>

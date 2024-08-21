@@ -41,7 +41,7 @@ class KhamPhaController extends Controller
         return [
             'locations' => $locations,
             'all_area' => $all_area,
-                'categorizedLocations' => $categorizedLocations,
+            'categorizedLocations' => $categorizedLocations,
         ];
     }
 
@@ -92,6 +92,55 @@ class KhamPhaController extends Controller
         return view('khamphaChiTiet', $data);
 
     }
+
+
+
+    public function thucvat(){
+        $data = $this->dataThucVat();
+        return view('thucvat', $data);
+    }
+        function dataThucVat() {
+
+            
+            $locationDetail = Location::with('images')->find(59);
+            $previousLocation = Location::where('loID', '<', $locationDetail->loID)->orderBy('loID', 'desc')->first();
+            $nextLocation = Location::where('loID', '>', $locationDetail->loID)->orderBy('loID', 'asc')->first();
+            $randomLocations = Location::with(['images' => function($query) {
+                $query->limit(1);
+            }, 'category.area'])
+            ->inRandomOrder()
+            ->get()
+            ->groupBy('categoryID')
+            ->take(4)
+            ->flatMap(function ($group) {
+                return $group->take(1);
+            });
+
+
+             // ------header---------
+            $all_area = Area::all();
+            $categories = Category::with('locations')->get();
+
+            // Sắp xếp các location theo categoryID và lấy luôn tên category
+            $categorizedLocations = [];
+            foreach ($categories as $category) {
+                $categorizedLocations[$category->categoryID] = [
+                    'categoryName' => $category->categoryName,
+                    'locations' => $category->locations
+                ];
+            }
+            return [
+                'locationDetail' => $locationDetail,
+                'previousLocation' => $previousLocation,
+                'nextLocation' => $nextLocation,
+                'randomLocations' => $randomLocations,
+
+                // header
+                'all_area' => $all_area,
+                'categorizedLocations' => $categorizedLocations,
+
+            ];
+        }
     
 
 }
